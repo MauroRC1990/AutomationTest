@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-22T18:37:11 ART" name="Default suite" finished-at="2023-03-22T18:37:44 ART" duration-ms="32878">
+  <suite started-at="2023-03-23T18:53:56 ART" name="Default suite" finished-at="2023-03-23T18:54:34 ART" duration-ms="38621">
     <groups>
     </groups>
-    <test started-at="2023-03-22T18:37:11 ART" name="Default test" finished-at="2023-03-22T18:37:44 ART" duration-ms="32878">
-      <class name="com.automationtest.testng.DeleteEmployeeTest">
-        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@74f0ea28]" started-at="2023-03-22T18:37:11 ART" name="login" finished-at="2023-03-22T18:37:39 ART" duration-ms="27711" status="PASS">
+    <test started-at="2023-03-23T18:53:56 ART" name="Default test" finished-at="2023-03-23T18:54:34 ART" duration-ms="38621">
+      <class name="com.automationtest.testng.EditEmployeeContactDetailsTest">
+        <test-method is-config="true" signature="stepsToReachContactDetails()[pri:0, instance:com.automationtest.testng.EditEmployeeContactDetailsTest@74f0ea28]" started-at="2023-03-23T18:53:56 ART" name="stepsToReachContactDetails" finished-at="2023-03-23T18:54:30 ART" duration-ms="34791" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="deleteEmployee()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@74f0ea28]" started-at="2023-03-22T18:37:39 ART" name="deleteEmployee" finished-at="2023-03-22T18:37:44 ART" duration-ms="4757" status="PASS">
+        </test-method> <!-- stepsToReachContactDetails -->
+        <test-method signature="editEmployeeContactDetails()[pri:0, instance:com.automationtest.testng.EditEmployeeContactDetailsTest@74f0ea28]" started-at="2023-03-23T18:54:30 ART" name="editEmployeeContactDetails" finished-at="2023-03-23T18:54:34 ART" duration-ms="3593" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteEmployee -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@74f0ea28]" started-at="2023-03-22T18:37:44 ART" name="afterClass" finished-at="2023-03-22T18:37:44 ART" duration-ms="237" status="PASS">
+        </test-method> <!-- editEmployeeContactDetails -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.EditEmployeeContactDetailsTest@74f0ea28]" started-at="2023-03-23T18:54:34 ART" name="afterClass" finished-at="2023-03-23T18:54:34 ART" duration-ms="192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.automationtest.testng.DeleteEmployeeTest -->
+      </class> <!-- com.automationtest.testng.EditEmployeeContactDetailsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

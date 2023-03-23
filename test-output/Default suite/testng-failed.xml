@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automationtest.testng.PostOnNewsfeedTest">
+      <class name="com.automationtest.testng.EditEmployeeContactDetailsTest">
         <methods>
-          <include name="login"/>
-          <include name="postBuzzNewsfeed"/>
+          <include name="editEmployeeContactDetails"/>
           <include name="afterClass"/>
+          <include name="stepsToReachContactDetails"/>
         </methods>
-      </class> <!-- com.automationtest.testng.PostOnNewsfeedTest -->
+      </class> <!-- com.automationtest.testng.EditEmployeeContactDetailsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

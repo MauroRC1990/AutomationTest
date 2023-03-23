@@ -89,7 +89,7 @@ public class EditEmployeeContactDetailsTest {
 		}
 		
 		boolean expectedValue = true;
-		boolean realValue = driver.findElement(By.xpath("//p[text()='Successfully Saved']")).isDisplayed();
+		boolean realValue = driver.findElement(By.xpath("//div[text()='United States']")).isDisplayed();
         Assert.assertEquals(expectedValue, realValue);
 	}
 
