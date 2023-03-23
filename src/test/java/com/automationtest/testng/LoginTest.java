@@ -23,7 +23,7 @@ public class LoginTest {
 
 	WebDriver driver;
 	Wait<WebDriver> wait;
-	
+
 	@BeforeClass
 	public void openBrowser() {
 		ChromeOptions options = new ChromeOptions();
@@ -66,5 +66,4 @@ public class LoginTest {
 	public void afterClass() {
 		driver.quit();
 	}
-
 }

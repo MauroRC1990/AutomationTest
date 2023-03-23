@@ -21,7 +21,7 @@ public class NewEmployeeTest {
 
 	WebDriver driver;
 	Wait<WebDriver> wait;
-	
+
 	@BeforeClass
 	public void login() {
 		ChromeOptions options = new ChromeOptions();
@@ -29,7 +29,7 @@ public class NewEmployeeTest {
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		
+
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.waitForPresenceOfElement("//button[@type='submit']");
 
@@ -53,7 +53,7 @@ public class NewEmployeeTest {
 
 		orangeHRMPage.waitForPresenceOfElement("//h6[text()='Personal Details']");
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-form-loader']");
-		
+
 
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
@@ -73,5 +73,4 @@ public class NewEmployeeTest {
 	public void afterClass() {
 		driver.quit();
 	}
-
 }

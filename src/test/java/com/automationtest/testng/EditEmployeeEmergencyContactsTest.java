@@ -94,10 +94,10 @@ public class EditEmployeeEmergencyContactsTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		boolean expectedValue = true;
 		boolean realValue = driver.findElement(By.xpath("//div[text()='Jeff Moreau']")).isDisplayed();
-        Assert.assertEquals(expectedValue, realValue);
+		Assert.assertEquals(expectedValue, realValue);
 	}
 
 

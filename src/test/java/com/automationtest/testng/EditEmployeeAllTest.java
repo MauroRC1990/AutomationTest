@@ -30,7 +30,7 @@ public class EditEmployeeAllTest {
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		
+
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.waitForPresenceOfElement("//button[@type='submit']");
 
@@ -131,7 +131,7 @@ public class EditEmployeeAllTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		orangeHRMPage.selectJobTab();
 		orangeHRMPage.setJoinedDate("2172-04-11");
 		orangeHRMPage.selectJobTitleOptions();
@@ -153,10 +153,10 @@ public class EditEmployeeAllTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		boolean expectedValue = true;
 		boolean realValue = driver.findElement(By.xpath("//div[text()='Software Engineer']")).isDisplayed();
-        Assert.assertEquals(expectedValue, realValue);
+		Assert.assertEquals(expectedValue, realValue);
 	}
 
 

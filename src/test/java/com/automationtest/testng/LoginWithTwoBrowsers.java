@@ -20,12 +20,12 @@ import org.testng.annotations.Test;
 import com.automationtest.pom.OrangeHRMPage;
 
 public class LoginWithTwoBrowsers {
-	
+
 	WebDriver driver;
 	Wait<WebDriver> wait;
 
 	@Parameters("Browser")
-	
+
 	@BeforeClass
 	public void openBrowser(String browser) {
 
@@ -62,7 +62,7 @@ public class LoginWithTwoBrowsers {
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 		orangeHRMPage.waitForVisibilityOfAllElements("//div[@class='oxd-pie-chart']");
 		orangeHRMPage.waitForVisibilityOf("//img[@alt='client brand banner']");
-		
+
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\LoginWithBothBrowsersScreenshot.png"));

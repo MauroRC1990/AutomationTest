@@ -30,10 +30,10 @@ public class DeleteEmployeeTest {
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		
+
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.waitForPresenceOfElement("//button[@type='submit']");
-		
+
 		orangeHRMPage.setUsername("Admin");
 		orangeHRMPage.setPassword("admin123");
 		orangeHRMPage.submit();
@@ -52,7 +52,7 @@ public class DeleteEmployeeTest {
 		orangeHRMPage.confirmDelete();
 
 		orangeHRMPage.waitForVisibilityOfElement("//p[text()='Successfully Deleted']");
-		
+
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\EmployeeDeletedScreenshot.png"));
@@ -60,10 +60,10 @@ public class DeleteEmployeeTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		boolean expectedValue = true;
 		boolean realValue = driver.findElement(By.xpath("//p[text()='Successfully Deleted']")).isDisplayed();
-        Assert.assertEquals(expectedValue, realValue);
+		Assert.assertEquals(expectedValue, realValue);
 	}
 
 

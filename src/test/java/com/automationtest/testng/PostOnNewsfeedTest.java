@@ -51,7 +51,7 @@ public class PostOnNewsfeedTest {
 
 		orangeHRMPage.waitForVisibilityOfElement("//p[text()='Successfully Saved']");
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-form-loader']");
-		
+
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\NewsfeedPostScreenshot.png"));
@@ -59,10 +59,10 @@ public class PostOnNewsfeedTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		boolean expectedValue = true;
 		boolean realValue = driver.findElement(By.xpath("//p[text()[contains(., '2023')]]")).isDisplayed();
-        Assert.assertEquals(expectedValue, realValue);		
+		Assert.assertEquals(expectedValue, realValue);		
 	}
 
 
@@ -70,6 +70,4 @@ public class PostOnNewsfeedTest {
 	public void afterClass() {
 		driver.quit();
 	}
-
-
 }

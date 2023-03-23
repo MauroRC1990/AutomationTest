@@ -78,10 +78,10 @@ public class EditEmployeePersonalDetailsTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		boolean expectedValue = true;
 		boolean realValue = driver.findElement(By.xpath("//p[text()='Successfully Saved']")).isDisplayed();
-        Assert.assertEquals(expectedValue, realValue);
+		Assert.assertEquals(expectedValue, realValue);
 	}
 
 

@@ -51,7 +51,7 @@ public class DeleteNewsfeedPostTest {
 		orangeHRMPage.confirmDelete();
 
 		orangeHRMPage.waitForVisibilityOfElement("//p[text()='Successfully Deleted']");
-		
+
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\NewsfeedPostDeletedScreenshot.png"));
@@ -59,10 +59,10 @@ public class DeleteNewsfeedPostTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		boolean expectedValue = true;
 		boolean realValue = driver.findElement(By.xpath("//p[text()='Successfully Deleted']")).isDisplayed();
-        Assert.assertEquals(expectedValue, realValue);
+		Assert.assertEquals(expectedValue, realValue);
 
 	}
 
@@ -71,7 +71,4 @@ public class DeleteNewsfeedPostTest {
 	public void afterClass() {
 		driver.quit();
 	}
-
-
-
 }

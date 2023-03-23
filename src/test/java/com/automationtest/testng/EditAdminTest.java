@@ -77,10 +77,10 @@ public class EditAdminTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		boolean expectedValue = true;
 		boolean realValue = driver.findElement(By.xpath("//p[text()='Successfully Saved']")).isDisplayed();
-        Assert.assertEquals(expectedValue, realValue);
+		Assert.assertEquals(expectedValue, realValue);
 	}
 
 
@@ -88,5 +88,4 @@ public class EditAdminTest {
 	public void afterClass() {
 		driver.quit();
 	}
-
 }
