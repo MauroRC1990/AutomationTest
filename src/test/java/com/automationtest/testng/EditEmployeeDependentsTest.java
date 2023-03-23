@@ -104,7 +104,7 @@ public class EditEmployeeDependentsTest {
 		}
 		
 		boolean expectedValue = true;
-		boolean realValue = driver.findElement(By.xpath("//p[text()='Successfully Saved']")).isDisplayed();
+		boolean realValue = driver.findElement(By.xpath("//div[text()='Kaidan']")).isDisplayed();
         Assert.assertEquals(expectedValue, realValue);
 	}
 
