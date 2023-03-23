@@ -24,7 +24,7 @@ public class PostOnNewsfeedTest {
 
 
 	@BeforeClass
-	public void login(String browser) {
+	public void login() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(options);
