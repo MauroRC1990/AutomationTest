@@ -64,7 +64,6 @@ public class DeleteNewsfeedPostTest {
 		boolean expectedValue = true;
 		boolean realValue = driver.findElement(By.xpath("//p[text()='Successfully Deleted']")).isDisplayed();
 		Assert.assertEquals(expectedValue, realValue);
-
 	}
 
 

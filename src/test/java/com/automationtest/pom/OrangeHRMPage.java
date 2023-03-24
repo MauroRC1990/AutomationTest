@@ -344,7 +344,7 @@ public class OrangeHRMPage {
 	}
 
 	public void save() {
-		waitForInvisibilityOfElement("//div[@class='oxd-form-loader']");
+		waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 		saveBtn.click();
 	}
 
@@ -369,7 +369,7 @@ public class OrangeHRMPage {
 	}
 
 	public void selectNationalityOptions() {
-		waitForInvisibilityOfElement("//div[@class='oxd-form-loader']");
+		waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 		selectNationalityOptions.click();
 	}
 
@@ -432,7 +432,7 @@ public class OrangeHRMPage {
 
 	public void selectCountryOptions() {
 		waitForVisibilityOfElement("//label[text()='Country']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::div[@class='oxd-select-text oxd-select-text--active']");
-		waitForInvisibilityOfElement("//div[@class='oxd-form-loader']");
+		waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 		selectCountryOptions.click();
 	}
 
@@ -523,7 +523,7 @@ public class OrangeHRMPage {
 
 	public void selectJobTitleOptions() {
 		waitForVisibilityOfElement("//label[text()='Job Title']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::div[@class='oxd-select-text oxd-select-text--active']");
-		waitForInvisibilityOfElement("//div[@class='oxd-form-loader']");
+		waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 		selectJobTitleOptions.click();
 	}
 
@@ -564,7 +564,7 @@ public class OrangeHRMPage {
 
 	public void writePost(String post) {
 		waitForVisibilityOfElement("//textarea[@class='oxd-buzz-post-input']");
-		waitForInvisibilityOfElement("//div[@class='oxd-form-loader']");
+		waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 		writePost.sendKeys(post);
 	}
 
