@@ -4,14 +4,14 @@
   <test name="FirefoxTest">
 	  <parameter name="Browser" value="Firefox" />
       <classes>
-      <class name="com.automationtest.testng.LoginWithTwoBrowsers"/>
+      <class name="com.automationtest.testng.NewEmployeeTest"/>
       </classes>
   </test> <!-- Test --> 
    
   <test name="ChromeTest">    
 	<parameter name="Browser" value="Chrome" />
     <classes>
-       <class name="com.automationtest.testng.LoginWithTwoBrowsers"/>
+       <class name="com.automationtest.testng.NewEmployee2Test"/>
     </classes>
      
   </test> <!-- Test -->
