@@ -69,7 +69,7 @@ public class EditEmployeePersonalDetailsTest {
 		orangeHRMPage.selectBloodTypeAPositive();
 		orangeHRMPage.saveCustomFields();
 
-		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-form-loader']");
+		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {

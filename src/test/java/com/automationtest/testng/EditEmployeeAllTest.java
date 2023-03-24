@@ -69,7 +69,7 @@ public class EditEmployeeAllTest {
 		orangeHRMPage.selectBloodTypeAPositive();
 		orangeHRMPage.saveCustomFields();
 
-		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-form-loader']");
+		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
@@ -87,7 +87,7 @@ public class EditEmployeeAllTest {
 		orangeHRMPage.setStateOrProvince("Citadel");
 		orangeHRMPage.save();
 
-		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-form-loader']");
+		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 
 		File file1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
@@ -104,7 +104,7 @@ public class EditEmployeeAllTest {
 		orangeHRMPage.setHomeTelephone("628-2002");
 		orangeHRMPage.save();
 
-		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-form-loader']");
+		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 
 		File file2 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
@@ -122,8 +122,8 @@ public class EditEmployeeAllTest {
 		orangeHRMPage.setDependentName("Kaidan");
 		orangeHRMPage.save();
 
-		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-form-loader']");
-
+		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
+		
 		File file3 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(file3, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\DependentsScreenshot.png"));
@@ -144,7 +144,7 @@ public class EditEmployeeAllTest {
 		orangeHRMPage.selectFullTimePermanent();
 		orangeHRMPage.save();
 
-		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-form-loader']");
+		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 
 		File file4 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {

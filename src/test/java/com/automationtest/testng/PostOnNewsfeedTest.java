@@ -50,7 +50,7 @@ public class PostOnNewsfeedTest {
 		orangeHRMPage.submitPost();
 
 		orangeHRMPage.waitForVisibilityOfElement("//p[text()='Successfully Saved']");
-		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-form-loader']");
+		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
