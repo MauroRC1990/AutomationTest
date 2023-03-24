@@ -2,40 +2,40 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-24T15:51:17 ART" name="Practice Suite" finished-at="2023-03-24T15:51:54 ART" duration-ms="37324">
+  <suite started-at="2023-03-24T20:08:14 ART" name="Create Two Employees Suite" finished-at="2023-03-24T20:08:55 ART" duration-ms="40997">
     <groups>
     </groups>
-    <test started-at="2023-03-24T15:51:17 ART" name="ChromeTest" finished-at="2023-03-24T15:51:54 ART" duration-ms="36892">
+    <test started-at="2023-03-24T20:08:14 ART" name="Employee2Test" finished-at="2023-03-24T20:08:52 ART" duration-ms="38382">
       <class name="com.automationtest.testng.NewEmployee2Test">
-        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.NewEmployee2Test@411f53a0]" started-at="2023-03-24T15:51:17 ART" name="login" finished-at="2023-03-24T15:51:42 ART" duration-ms="24938" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.NewEmployee2Test@6771beb3]" started-at="2023-03-24T20:08:14 ART" name="login" finished-at="2023-03-24T20:08:39 ART" duration-ms="24664" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="newEmployee()[pri:0, instance:com.automationtest.testng.NewEmployee2Test@411f53a0]" started-at="2023-03-24T15:51:42 ART" name="newEmployee" finished-at="2023-03-24T15:51:53 ART" duration-ms="11718" status="PASS">
+        <test-method signature="newEmployee2()[pri:0, instance:com.automationtest.testng.NewEmployee2Test@6771beb3]" started-at="2023-03-24T20:08:39 ART" name="newEmployee2" finished-at="2023-03-24T20:08:52 ART" duration-ms="13458" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- newEmployee -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.NewEmployee2Test@411f53a0]" started-at="2023-03-24T15:51:54 ART" name="afterClass" finished-at="2023-03-24T15:51:54 ART" duration-ms="197" status="PASS">
+        </test-method> <!-- newEmployee2 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.NewEmployee2Test@6771beb3]" started-at="2023-03-24T20:08:52 ART" name="afterClass" finished-at="2023-03-24T20:08:52 ART" duration-ms="209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- com.automationtest.testng.NewEmployee2Test -->
-    </test> <!-- ChromeTest -->
-    <test started-at="2023-03-24T15:51:17 ART" name="FirefoxTest" finished-at="2023-03-24T15:51:54 ART" duration-ms="37324">
+    </test> <!-- Employee2Test -->
+    <test started-at="2023-03-24T20:08:14 ART" name="Employee1Test" finished-at="2023-03-24T20:08:55 ART" duration-ms="40997">
       <class name="com.automationtest.testng.NewEmployeeTest">
-        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.NewEmployeeTest@3c19aaa5]" started-at="2023-03-24T15:51:17 ART" name="login" finished-at="2023-03-24T15:51:42 ART" duration-ms="24804" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.NewEmployeeTest@1283bb96]" started-at="2023-03-24T20:08:14 ART" name="login" finished-at="2023-03-24T20:08:43 ART" duration-ms="29024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="newEmployee()[pri:0, instance:com.automationtest.testng.NewEmployeeTest@3c19aaa5]" started-at="2023-03-24T15:51:42 ART" name="newEmployee" finished-at="2023-03-24T15:51:54 ART" duration-ms="12294" status="PASS">
+        <test-method signature="newEmployee2()[pri:0, instance:com.automationtest.testng.NewEmployeeTest@1283bb96]" started-at="2023-03-24T20:08:43 ART" name="newEmployee2" finished-at="2023-03-24T20:08:55 ART" duration-ms="11695" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- newEmployee -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.NewEmployeeTest@3c19aaa5]" started-at="2023-03-24T15:51:54 ART" name="afterClass" finished-at="2023-03-24T15:51:54 ART" duration-ms="176" status="PASS">
+        </test-method> <!-- newEmployee2 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.NewEmployeeTest@1283bb96]" started-at="2023-03-24T20:08:55 ART" name="afterClass" finished-at="2023-03-24T20:08:55 ART" duration-ms="247" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- com.automationtest.testng.NewEmployeeTest -->
-    </test> <!-- FirefoxTest -->
-  </suite> <!-- Practice Suite -->
+    </test> <!-- Employee1Test -->
+  </suite> <!-- Create Two Employees Suite -->
 </testng-results>

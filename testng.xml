@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Practice Suite" parallel="tests">
+<suite name="Two Browser Login Suite" parallel="tests">
   <test name="FirefoxTest">
 	  <parameter name="Browser" value="Firefox" />
       <classes>
-      <class name="com.automationtest.testng.NewEmployeeTest"/>
+      <class name="com.automationtest.testng.LoginWithTwoBrowsers"/>
       </classes>
   </test> <!-- Test --> 
    
   <test name="ChromeTest">    
 	<parameter name="Browser" value="Chrome" />
     <classes>
-       <class name="com.automationtest.testng.NewEmployee2Test"/>
+       <class name="com.automationtest.testng.LoginWithTwoBrowsers"/>
     </classes>
      
   </test> <!-- Test -->
