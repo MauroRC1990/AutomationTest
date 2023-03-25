@@ -86,8 +86,11 @@ public class OrangeHRMPage {
 	@FindBy(xpath="//label[text()='Date of Birth']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
 	WebElement dateOfBirthField;
 
-	@FindBy(xpath="//input[@value='1']//following-sibling::span[@class='oxd-radio-input oxd-radio-input--active --label-right oxd-radio-input']")
+	@FindBy(xpath="//label[text()='Male']")
 	WebElement selectMaleGender;
+	
+	@FindBy(xpath="//label[text()='Female']")
+	WebElement selectFemaleGender;
 
 	@FindBy(xpath="//label[text()='Military Service']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
 	WebElement militaryServiceField;
@@ -393,6 +396,10 @@ public class OrangeHRMPage {
 
 	public void selectMaleGender() {
 		selectMaleGender.click();
+	}
+	
+	public void selectFemaleGender() {
+		selectFemaleGender.click();
 	}
 
 	public void setMilitaryService(String militaryService) {

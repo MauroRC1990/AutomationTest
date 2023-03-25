@@ -3,13 +3,13 @@
 <suite name="Create Two Employees Suite" parallel="tests">	
   <test name="Employee1Test">
       <classes>
-      <class name="com.automationtest.testng.NewEmployeeTest"/>
+      <class name="com.automationtest.testng.EditEmployeeAllTest"/>
       </classes>
   </test> <!-- Test --> 
    
   <test name="Employee2Test">    
     <classes>
-       <class name="com.automationtest.testng.NewEmployee2Test"/>
+       <class name="com.automationtest.testng.EditEmployee2AllTest"/>
     </classes>
      
   </test> <!-- Test -->
