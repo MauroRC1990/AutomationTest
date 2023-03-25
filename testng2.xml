@@ -9,7 +9,7 @@
    
   <test name="Employee2Test">    
     <classes>
-       <class name="com.automationtest.testng.EditEmployee2AllTest"/>
+       <class name="com.automationtest.testng.EditEmployeeAll2Test"/>
     </classes>
      
   </test> <!-- Test -->

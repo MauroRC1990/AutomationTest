@@ -52,7 +52,7 @@ public class OrangeHRMPage {
 	WebElement saveBtn;
 
 	@FindBy(xpath="//div[@class='orangehrm-horizontal-padding orangehrm-vertical-padding']//child::button[text()=' Save ']")
-	WebElement savePersonalDetails;
+	WebElement savePersonalDetailsBtn;
 
 	@FindBy(xpath="//h6[text()='Custom Fields']//ancestor::div[@class='orangehrm-custom-fields']//child::button")
 	WebElement saveCustomFieldsBtn;
@@ -69,40 +69,40 @@ public class OrangeHRMPage {
 	WebElement nicknameField;
 
 	@FindBy(xpath="//label[text()='Nationality']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow']")
-	WebElement selectNationalityOptions;
+	WebElement nationalityOptions;
 
 	@FindBy(xpath="//span[text()='American']//parent::div")
-	WebElement selectNationalityAmerican;
+	WebElement nationalityAmerican;
 
 	@FindBy(xpath="//label[text()='Marital Status']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::div[@class='oxd-select-text oxd-select-text--active']")
-	WebElement selectMaritalStatusOptions;
+	WebElement maritalStatusOptions;
 
 	@FindBy(xpath="//span[text()='Single']//parent::div")
-	WebElement selectMaritalStatusSingle;
+	WebElement maritalStatusSingle;
 
 	@FindBy(xpath="//span[text()='Married']//parent::div")
-	WebElement selectMaritalStatusMarried;
+	WebElement maritalStatusMarried;
 
 	@FindBy(xpath="//label[text()='Date of Birth']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
 	WebElement dateOfBirthField;
 
 	@FindBy(xpath="//label[text()='Male']")
-	WebElement selectMaleGender;
+	WebElement maleGenderOption;
 	
 	@FindBy(xpath="//label[text()='Female']")
-	WebElement selectFemaleGender;
+	WebElement femaleGenderOption;
 
 	@FindBy(xpath="//label[text()='Military Service']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
 	WebElement militaryServiceField;
 
 	@FindBy(xpath="//label[text()='Blood Type']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::i")
-	WebElement selectBloodTypeOptions;
+	WebElement bloodTypeOptions;
 
 	@FindBy(xpath="//span[text()='A+']//parent::div")
-	WebElement selectBloodTypeAPositive;
+	WebElement bloodTypeAPositive;
 
 	@FindBy(xpath="//div[text()='-- Select --']")
-	WebElement selectNoBloodType;
+	WebElement noBloodType;
 
 
 
@@ -110,10 +110,10 @@ public class OrangeHRMPage {
 	WebElement contactDetailsTab;
 
 	@FindBy(xpath="//label[text()='Country']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::div[@class='oxd-select-text oxd-select-text--active']")
-	WebElement selectCountryOptions;
+	WebElement countryOptions;
 
 	@FindBy(xpath="//span[text()='United States']//parent::div")
-	WebElement selectUnitedStates;
+	WebElement unitedStatesOption;
 
 	@FindBy(xpath="//label[text()='Street 1']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
 	WebElement street1Field;
@@ -130,7 +130,7 @@ public class OrangeHRMPage {
 	WebElement emergencyContactsTab;
 
 	@FindBy(xpath="//h6[text()='Assigned Emergency Contacts']//ancestor::div[@class='orangehrm-horizontal-padding orangehrm-vertical-padding']//child::button")
-	WebElement addEmergencyContact;
+	WebElement addEmergencyContactBtn;
 
 	@FindBy(xpath="//label[text()='Name']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
 	WebElement contactNameField;
@@ -147,13 +147,13 @@ public class OrangeHRMPage {
 	WebElement dependentsTab;
 
 	@FindBy(xpath="//h6[text()='Assigned Dependents']//ancestor::div[@class='orangehrm-action-header']//child::button")
-	WebElement addDependent;
+	WebElement addDependentBtn;
 
 	@FindBy(xpath="//label[text()='Relationship']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::div[@class='oxd-select-text oxd-select-text--active']")
-	WebElement selectRelationshipOptions;
+	WebElement relationshipOptions;
 
 	@FindBy(xpath="//span[text()='Child']//parent::div")
-	WebElement selectChild;
+	WebElement childOption;
 
 	@FindBy(xpath="//label[text()='Name']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
 	WebElement dependentNameField;
@@ -167,28 +167,28 @@ public class OrangeHRMPage {
 	WebElement joinedDateField;
 
 	@FindBy(xpath="//label[text()='Job Title']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::div[@class='oxd-select-text oxd-select-text--active']")
-	WebElement selectJobTitleOptions;
+	WebElement jobTitleOptions;
 
 	@FindBy(xpath="//span[text()='Software Engineer']//parent::div")
-	WebElement selectSoftwareEngineer;
+	WebElement softwareEngineerOption;
 
 	@FindBy(xpath="//label[text()='Job Category']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::div[@class='oxd-select-text oxd-select-text--active']")
-	WebElement selectJobCategoryOptions;
+	WebElement jobCategoryOptions;
 
 	@FindBy(xpath="//span[text()='Technicians']//parent::div")
-	WebElement selectTechnicians;
+	WebElement techniciansOption;
 
 	@FindBy(xpath="//label[text()='Sub Unit']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::div[@class='oxd-select-text oxd-select-text--active']")
-	WebElement selectSubUnitOptions;
+	WebElement subUnitOptions;
 
 	@FindBy(xpath="//span[text()='Engineering']//parent::div")
-	WebElement selectEngineering;
+	WebElement engineeringOption;
 
 	@FindBy(xpath="//label[text()='Employment Status']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::div[@class='oxd-select-text oxd-select-text--active']")
-	WebElement selectEmploymentStatusOptions;
+	WebElement employmentStatusOptions;
 
 	@FindBy(xpath="//span[text()='Full-Time Permanent']//parent::div")
-	WebElement selectFullTimePermanent;
+	WebElement fullTimePermanentOption;
 
 
 
@@ -196,10 +196,10 @@ public class OrangeHRMPage {
 	WebElement buzzTab;
 
 	@FindBy(xpath="//textarea[@class='oxd-buzz-post-input']")
-	WebElement writePost;
+	WebElement postField;
 
 	@FindBy(xpath="//button[@class='oxd-button oxd-button--medium oxd-button--main']")
-	WebElement submitPost;
+	WebElement submitPostBtn;
 
 
 
@@ -207,7 +207,7 @@ public class OrangeHRMPage {
 	WebElement postConfig;
 
 	@FindBy(xpath="//p[text()='Delete Post']")
-	WebElement deletePost;
+	WebElement deletePostBtn;
 
 
 
@@ -244,7 +244,7 @@ public class OrangeHRMPage {
 	WebElement sinNumberField;
 
 	@FindBy(xpath="//label[text()='Yes']")
-	WebElement setSmokerYes;
+	WebElement smokerYesOption;
 
 
 
@@ -373,19 +373,19 @@ public class OrangeHRMPage {
 
 	public void selectNationalityOptions() {
 		waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
-		selectNationalityOptions.click();
+		nationalityOptions.click();
 	}
 
 	public void selectNationalityAmerican() {
-		selectNationalityAmerican.click();
+		nationalityAmerican.click();
 	}
 
 	public void selectMaritalStatusOptions() {
-		selectMaritalStatusOptions.click();
+		maritalStatusOptions.click();
 	}
 
 	public void selectMaritalStatusSingle() {
-		selectMaritalStatusSingle.click();
+		maritalStatusSingle.click();
 	}
 
 	public void setDateOfBirth(String dateOfBirth) {
@@ -395,11 +395,11 @@ public class OrangeHRMPage {
 	}
 
 	public void selectMaleGender() {
-		selectMaleGender.click();
+		maleGenderOption.click();
 	}
 	
 	public void selectFemaleGender() {
-		selectFemaleGender.click();
+		femaleGenderOption.click();
 	}
 
 	public void setMilitaryService(String militaryService) {
@@ -409,20 +409,20 @@ public class OrangeHRMPage {
 	}
 
 	public void savePersonalDetails() {
-		savePersonalDetails.click();
+		savePersonalDetailsBtn.click();
 	}
 
 	public void selectBloodTypeOptions() {
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", selectBloodTypeOptions);
-		selectBloodTypeOptions.click();
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", bloodTypeOptions);
+		bloodTypeOptions.click();
 	}
 
 	public void selectBloodTypeAPositive() {
-		selectBloodTypeAPositive.click();
+		bloodTypeAPositive.click();
 	}
 
 	public void selectNoBloodType() {
-		selectNoBloodType.click();
+		noBloodType.click();
 	}
 
 	public void saveCustomFields() {
@@ -440,11 +440,11 @@ public class OrangeHRMPage {
 	public void selectCountryOptions() {
 		waitForVisibilityOfElement("//label[text()='Country']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::div[@class='oxd-select-text oxd-select-text--active']");
 		waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
-		selectCountryOptions.click();
+		countryOptions.click();
 	}
 
 	public void selectUnitedStates() {
-		selectUnitedStates.click();
+		unitedStatesOption.click();
 	}
 
 	public void setStreet1(String street1) {
@@ -474,15 +474,15 @@ public class OrangeHRMPage {
 
 	public void addDependent() {
 		waitForVisibilityOfElement("//h6[text()='Assigned Dependents']//ancestor::div[@class='orangehrm-action-header']//child::button");
-		addDependent.click();
+		addDependentBtn.click();
 	}
 
 	public void selectRepationshipOptions() {
-		selectRelationshipOptions.click();
+		relationshipOptions.click();
 	}
 
 	public void selectChild() {
-		selectChild.click();
+		childOption.click();
 	}
 
 	public void setDependentName(String dependentName) {
@@ -501,7 +501,7 @@ public class OrangeHRMPage {
 
 	public void addEmergencyContact() {
 		waitForVisibilityOfElement("//h6[text()='Assigned Emergency Contacts']//ancestor::div[@class='orangehrm-horizontal-padding orangehrm-vertical-padding']//child::button");
-		addEmergencyContact.click();
+		addEmergencyContactBtn.click();
 	}
 
 	public void setContactName(String contactName) {
@@ -531,35 +531,35 @@ public class OrangeHRMPage {
 	public void selectJobTitleOptions() {
 		waitForVisibilityOfElement("//label[text()='Job Title']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::div[@class='oxd-select-text oxd-select-text--active']");
 		waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
-		selectJobTitleOptions.click();
+		jobTitleOptions.click();
 	}
 
 	public void selectSoftwareEngineer() {
-		selectSoftwareEngineer.click();
+		softwareEngineerOption.click();
 	}
 
 	public void selectJobCategoryOptions() {
-		selectJobCategoryOptions.click();
+		jobCategoryOptions.click();
 	}
 
 	public void selectTechnicians() {
-		selectTechnicians.click();
+		techniciansOption.click();
 	}
 
 	public void selectSubUnitOptions() {
-		selectSubUnitOptions.click();
+		subUnitOptions.click();
 	}
 
 	public void selectEngineering() {
-		selectEngineering.click();
+		engineeringOption.click();
 	}
 
 	public void selectEmploymentStatusOptions() {
-		selectEmploymentStatusOptions.click();
+		employmentStatusOptions.click();
 	}
 
 	public void selectFullTimePermanent() {
-		selectFullTimePermanent.click();
+		fullTimePermanentOption.click();
 	}
 
 
@@ -572,12 +572,12 @@ public class OrangeHRMPage {
 	public void writePost(String post) {
 		waitForVisibilityOfElement("//textarea[@class='oxd-buzz-post-input']");
 		waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
-		writePost.sendKeys(post);
+		postField.sendKeys(post);
 	}
 
 	public void submitPost() {
 		waitForVisibilityOfElement("//button[@class='oxd-button oxd-button--medium oxd-button--main']");
-		submitPost.click();
+		submitPostBtn.click();
 	}
 
 	public void selectPostConfig() {
@@ -587,7 +587,7 @@ public class OrangeHRMPage {
 
 	public void selectDeletePostOption() {
 		waitForVisibilityOfElement("//p[text()='Delete Post']");
-		deletePost.click();
+		deletePostBtn.click();
 	}
 
 
@@ -620,11 +620,11 @@ public class OrangeHRMPage {
 	}
 
 	public void selectMaritalStatusMarried() {
-		selectMaritalStatusMarried.click();
+		maritalStatusMarried.click();
 	}
 
 	public void setSmokerYes() {
-		setSmokerYes.click();
+		smokerYesOption.click();
 	}
 
 
