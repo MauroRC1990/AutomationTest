@@ -23,6 +23,7 @@ public class NewEmployee2Test {
 	WebDriver driver;
 	Wait<WebDriver> wait;
 
+	
 	@BeforeClass
 	public void login() {
 		ChromeOptions options = new ChromeOptions();

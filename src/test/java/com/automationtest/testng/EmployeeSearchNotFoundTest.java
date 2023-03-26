@@ -2,6 +2,7 @@ package com.automationtest.testng;
 
 import java.io.File;
 import java.io.IOException;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -17,12 +18,12 @@ import org.testng.annotations.Test;
 
 import com.automationtest.pom.OrangeHRMPage;
 
-public class NewEmployeeTest {
+public class EmployeeSearchNotFoundTest {
 
 	WebDriver driver;
 	Wait<WebDriver> wait;
 
-	
+
 	@BeforeClass
 	public void login() {
 		ChromeOptions options = new ChromeOptions();
@@ -43,28 +44,24 @@ public class NewEmployeeTest {
 
 
 	@Test
-	public void newEmployee2() {
+	public void searchNotFound() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.selectPimTab();
-		orangeHRMPage.selectAddEmployeeTab();
-		orangeHRMPage.setfirstName("John");
-		orangeHRMPage.setlastName("Shepard");
-		orangeHRMPage.setEmployeeId("5923-AC");
-		orangeHRMPage.save();
+		orangeHRMPage.setEmployeeNameSearch("Noname");
+		orangeHRMPage.search();
 
-		orangeHRMPage.waitForPresenceOfElement("//h6[text()='Personal Details']");
-		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
+		orangeHRMPage.waitForVisibilityOfElement("//p[text()='No Records Found']");
 
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\NewEmployeeScreenshot.png"));
+			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\SearchNotFoundScreenshot.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		boolean expectedValue = true;
-		boolean realValue = driver.findElement(By.xpath("//h6[text()='Personal Details']")).isDisplayed();
+		boolean realValue = driver.findElement(By.xpath("//p[text()='No Records Found']")).isDisplayed();
 		Assert.assertEquals(expectedValue, realValue);
 	}
 

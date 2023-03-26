@@ -43,7 +43,7 @@ public class DeleteEmployeeTest {
 
 
 	@Test
-	public void deleteEmployee() {
+	public void searchNotFound() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.selectPimTab();
 		orangeHRMPage.setEmployeeId("5923-AC");

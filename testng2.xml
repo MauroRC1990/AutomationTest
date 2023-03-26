@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Create Two Employees Suite" parallel="tests">	
+<suite name="Create Two Employees Suite" parallel="false">	
   <test name="Employee1Test">
       <classes>
-      <class name="com.automationtest.testng.EditEmployeeAllTest"/>
+      <class name="com.automationtest.testng.NewEmployeeTest"/>
       </classes>
   </test> <!-- Test --> 
    
   <test name="Employee2Test">    
     <classes>
-       <class name="com.automationtest.testng.EditEmployeeAll2Test"/>
+       <class name="com.automationtest.testng.NewEmployee2Test"/>
     </classes>
      
   </test> <!-- Test -->

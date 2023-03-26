@@ -210,7 +210,9 @@ public class OrangeHRMPage {
 	WebElement deletePostBtn;
 
 
-
+	@FindBy(xpath="//label[text()='Employee Name']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
+	WebElement employeeNameSearch;
+	
 	@FindBy(xpath="//button[text()=' Search ']")
 	WebElement searchBtn;
 
@@ -629,6 +631,10 @@ public class OrangeHRMPage {
 
 
 
+	public void setEmployeeNameSearch(String employeeName) {
+		waitForVisibilityOfElement("//label[text()='Employee Name']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input");
+		employeeNameSearch.sendKeys(employeeName);
+	}
 
 	public void search() {
 		searchBtn.click();
