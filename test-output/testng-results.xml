@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-25T21:02:42 ART" name="Default suite" finished-at="2023-03-25T21:03:06 ART" duration-ms="24165">
+  <suite started-at="2023-03-25T22:12:07 ART" name="Default suite" finished-at="2023-03-25T22:12:42 ART" duration-ms="34888">
     <groups>
     </groups>
-    <test started-at="2023-03-25T21:02:42 ART" name="Default test" finished-at="2023-03-25T21:03:06 ART" duration-ms="24165">
-      <class name="com.automationtest.testng.EmployeeSearchNotFoundTest">
-        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.EmployeeSearchNotFoundTest@74f0ea28]" started-at="2023-03-25T21:02:42 ART" name="login" finished-at="2023-03-25T21:03:03 ART" duration-ms="20483" status="PASS">
+    <test started-at="2023-03-25T22:12:07 ART" name="Default test" finished-at="2023-03-25T22:12:42 ART" duration-ms="34888">
+      <class name="com.automationtest.testng.NewCustomFieldTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.NewCustomFieldTest@74f0ea28]" started-at="2023-03-25T22:12:07 ART" name="login" finished-at="2023-03-25T22:12:29 ART" duration-ms="21751" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="searchNotFound()[pri:0, instance:com.automationtest.testng.EmployeeSearchNotFoundTest@74f0ea28]" started-at="2023-03-25T21:03:03 ART" name="searchNotFound" finished-at="2023-03-25T21:03:06 ART" duration-ms="3447" status="PASS">
+        <test-method signature="newCustomField()[pri:0, instance:com.automationtest.testng.NewCustomFieldTest@74f0ea28]" started-at="2023-03-25T22:12:29 ART" name="newCustomField" finished-at="2023-03-25T22:12:42 ART" duration-ms="12908" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchNotFound -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.EmployeeSearchNotFoundTest@74f0ea28]" started-at="2023-03-25T21:03:06 ART" name="afterClass" finished-at="2023-03-25T21:03:06 ART" duration-ms="183" status="PASS">
+        </test-method> <!-- newCustomField -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.NewCustomFieldTest@74f0ea28]" started-at="2023-03-25T22:12:42 ART" name="afterClass" finished-at="2023-03-25T22:12:42 ART" duration-ms="182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.automationtest.testng.EmployeeSearchNotFoundTest -->
+      </class> <!-- com.automationtest.testng.NewCustomFieldTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

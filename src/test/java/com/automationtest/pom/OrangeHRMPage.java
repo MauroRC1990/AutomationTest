@@ -46,8 +46,40 @@ public class OrangeHRMPage {
 	@FindBy(xpath="//label[text()='Employee Id']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
 	WebElement employeeIdField;
 
-
-
+	
+	
+	@FindBy(xpath="//span[text()='Configuration ']")
+	WebElement configurationTab;
+	
+	@FindBy(xpath="//a[text()='Custom Fields']")
+	WebElement customFieldsOption;
+	
+	@FindBy(xpath="//button[text()=' Add ']")
+	WebElement addCustomFieldBtn;
+	
+	@FindBy(xpath="//label[text()='Field Name']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
+	WebElement fieldNameInput;
+	
+	@FindBy(xpath="//label[text()='Screen']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::div[text()='-- Select --']")
+	WebElement screenOptions;
+	
+	@FindBy(xpath="//span[text()='Personal Details']")
+	WebElement personalDetailsOption;
+	
+	@FindBy(xpath="//label[text()='Type']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::div[text()='-- Select --']")
+	WebElement typeOptions;
+	
+	@FindBy(xpath="//span[text()='Text or Number']")
+	WebElement textOrNumberOption;
+	
+	@FindBy(xpath="//span[text()='Drop Down']")
+	WebElement dropDownOption;
+	
+	@FindBy(xpath="//label[text()='Select Options']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
+	WebElement optionsField;
+	
+	
+	
 	@FindBy(xpath="//button[text()=' Save ']")
 	WebElement saveBtn;
 
@@ -304,6 +336,7 @@ public class OrangeHRMPage {
 	
 	
 
+	
 	public void setUsername(String username) {
 		usernameBox.sendKeys(username);
 	}
@@ -348,6 +381,55 @@ public class OrangeHRMPage {
 		employeeIdField.sendKeys(id);
 	}
 
+	
+	
+	
+	public void selectConfigurationTab() {
+		waitForVisibilityOfElement("//span[text()='Configuration ']");
+		configurationTab.click();
+	}
+	
+	public void selectCustomFieldsOption() {
+		customFieldsOption.click();
+	}
+	
+	public void addCustomField() {
+		waitForVisibilityOfElement("//button[text()=' Add ']");
+		addCustomFieldBtn.click();
+	}
+	
+	public void setfieldName(String fieldName) {
+		waitForVisibilityOfElement("//label[text()='Field Name']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input");
+		fieldNameInput.sendKeys(fieldName);
+	}
+	
+	public void selectScreenOptions() {
+		screenOptions.click();
+	}
+	
+	public void selectPersonalDetailsOption() {
+		personalDetailsOption.click();
+	}
+	
+	public void selectTypeOptions() {
+		typeOptions.click();
+	}
+	
+	public void selectTextOrNumberOption() {
+		textOrNumberOption.click();
+	}
+	
+	public void selectDropDownOption() {
+		dropDownOption.click();
+	}
+	
+	public void setOptionsField(String options) {
+		optionsField.sendKeys(options);
+	}
+	
+	
+	
+	
 	public void save() {
 		waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 		saveBtn.click();
