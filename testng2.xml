@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="New custom field and employee" parallel="false">	
-  <test name="Custom Field">
+<suite name="New termination reason and delete it" parallel="false">	
+  <test name="New Termination Reason">
       <classes>
-      <class name="com.automationtest.testng.NewCustomFieldDropDownTest"/>
+      <class name="com.automationtest.testng.NewTerminationReasonTest"/>
       </classes>
   </test> <!-- Test --> 
    
-  <test name="Employee">    
+  <test name="Delete Termination Reason">    
     <classes>
-       <class name="com.automationtest.testng.EditEmployeeAllTest"/>
+       <class name="com.automationtest.testng.DeleteTerminationReasonTest"/>
     </classes>
      
   </test> <!-- Test -->
