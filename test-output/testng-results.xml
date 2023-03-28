@@ -2,72 +2,72 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-28T19:09:04 ART" name="New custom field and employee then delete both" finished-at="2023-03-28T19:11:46 ART" duration-ms="161590">
+  <suite started-at="2023-03-28T19:41:11 ART" name="Delete custom field, termination reason, employee and newsfeed post" finished-at="2023-03-28T19:43:10 ART" duration-ms="118466">
     <groups>
     </groups>
-    <test started-at="2023-03-28T19:09:04 ART" name="New Custom Field" finished-at="2023-03-28T19:09:48 ART" duration-ms="43851">
-      <class name="com.automationtest.testng.NewCustomFieldDropDownTest">
-        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.NewCustomFieldDropDownTest@1283bb96]" started-at="2023-03-28T19:09:05 ART" name="login" finished-at="2023-03-28T19:09:36 ART" duration-ms="31477" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="newCustomFieldDropDown()[pri:0, instance:com.automationtest.testng.NewCustomFieldDropDownTest@1283bb96]" started-at="2023-03-28T19:09:37 ART" name="newCustomFieldDropDown" finished-at="2023-03-28T19:09:48 ART" duration-ms="11393" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- newCustomFieldDropDown -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.NewCustomFieldDropDownTest@1283bb96]" started-at="2023-03-28T19:09:48 ART" name="afterClass" finished-at="2023-03-28T19:09:48 ART" duration-ms="185" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.automationtest.testng.NewCustomFieldDropDownTest -->
-    </test> <!-- New Custom Field -->
-    <test started-at="2023-03-28T19:09:48 ART" name="New Employee" finished-at="2023-03-28T19:10:47 ART" duration-ms="58946">
-      <class name="com.automationtest.testng.EditEmployeeAllTest">
-        <test-method is-config="true" signature="loginAndAddEmployee()[pri:0, instance:com.automationtest.testng.EditEmployeeAllTest@6b2ea799]" started-at="2023-03-28T19:09:48 ART" name="loginAndAddEmployee" finished-at="2023-03-28T19:10:18 ART" duration-ms="29950" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAndAddEmployee -->
-        <test-method signature="editEmployee()[pri:0, instance:com.automationtest.testng.EditEmployeeAllTest@6b2ea799]" started-at="2023-03-28T19:10:18 ART" name="editEmployee" finished-at="2023-03-28T19:10:47 ART" duration-ms="28780" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editEmployee -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.EditEmployeeAllTest@6b2ea799]" started-at="2023-03-28T19:10:47 ART" name="afterClass" finished-at="2023-03-28T19:10:47 ART" duration-ms="210" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.automationtest.testng.EditEmployeeAllTest -->
-    </test> <!-- New Employee -->
-    <test started-at="2023-03-28T19:10:47 ART" name="Delete Employee" finished-at="2023-03-28T19:11:17 ART" duration-ms="29390">
-      <class name="com.automationtest.testng.DeleteEmployeeTest">
-        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@62379589]" started-at="2023-03-28T19:10:47 ART" name="login" finished-at="2023-03-28T19:11:10 ART" duration-ms="22228" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="searchNotFound()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@62379589]" started-at="2023-03-28T19:11:10 ART" name="searchNotFound" finished-at="2023-03-28T19:11:16 ART" duration-ms="6859" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchNotFound -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@62379589]" started-at="2023-03-28T19:11:16 ART" name="afterClass" finished-at="2023-03-28T19:11:17 ART" duration-ms="300" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.automationtest.testng.DeleteEmployeeTest -->
-    </test> <!-- Delete Employee -->
-    <test started-at="2023-03-28T19:11:17 ART" name="Delete Custom Field" finished-at="2023-03-28T19:11:46 ART" duration-ms="29292">
+    <test started-at="2023-03-28T19:41:11 ART" name="Delete Custom Field" finished-at="2023-03-28T19:41:43 ART" duration-ms="31987">
       <class name="com.automationtest.testng.DeleteCustomFieldTest">
-        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteCustomFieldTest@7c7a06ec]" started-at="2023-03-28T19:11:17 ART" name="login" finished-at="2023-03-28T19:11:36 ART" duration-ms="19473" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteCustomFieldTest@1283bb96]" started-at="2023-03-28T19:41:11 ART" name="login" finished-at="2023-03-28T19:41:33 ART" duration-ms="21817" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="newCustomField()[pri:0, instance:com.automationtest.testng.DeleteCustomFieldTest@7c7a06ec]" started-at="2023-03-28T19:11:36 ART" name="newCustomField" finished-at="2023-03-28T19:11:46 ART" duration-ms="9574" status="PASS">
+        <test-method signature="newCustomField()[pri:0, instance:com.automationtest.testng.DeleteCustomFieldTest@1283bb96]" started-at="2023-03-28T19:41:33 ART" name="newCustomField" finished-at="2023-03-28T19:41:43 ART" duration-ms="9936" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newCustomField -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteCustomFieldTest@7c7a06ec]" started-at="2023-03-28T19:11:46 ART" name="afterClass" finished-at="2023-03-28T19:11:46 ART" duration-ms="241" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteCustomFieldTest@1283bb96]" started-at="2023-03-28T19:41:43 ART" name="afterClass" finished-at="2023-03-28T19:41:43 ART" duration-ms="182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- com.automationtest.testng.DeleteCustomFieldTest -->
     </test> <!-- Delete Custom Field -->
-  </suite> <!-- New custom field and employee then delete both -->
+    <test started-at="2023-03-28T19:41:43 ART" name="Delete Termination Reason" finished-at="2023-03-28T19:42:13 ART" duration-ms="29419">
+      <class name="com.automationtest.testng.DeleteTerminationReasonTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteTerminationReasonTest@51399530]" started-at="2023-03-28T19:41:43 ART" name="login" finished-at="2023-03-28T19:42:03 ART" duration-ms="19421" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="newTerminationReason()[pri:0, instance:com.automationtest.testng.DeleteTerminationReasonTest@51399530]" started-at="2023-03-28T19:42:03 ART" name="newTerminationReason" finished-at="2023-03-28T19:42:13 ART" duration-ms="9809" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newTerminationReason -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteTerminationReasonTest@51399530]" started-at="2023-03-28T19:42:13 ART" name="afterClass" finished-at="2023-03-28T19:42:13 ART" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.automationtest.testng.DeleteTerminationReasonTest -->
+    </test> <!-- Delete Termination Reason -->
+    <test started-at="2023-03-28T19:42:13 ART" name="Delete Employee" finished-at="2023-03-28T19:42:44 ART" duration-ms="31598">
+      <class name="com.automationtest.testng.DeleteEmployeeTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@3754a4bf]" started-at="2023-03-28T19:42:13 ART" name="login" finished-at="2023-03-28T19:42:36 ART" duration-ms="23496" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="searchNotFound()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@3754a4bf]" started-at="2023-03-28T19:42:36 ART" name="searchNotFound" finished-at="2023-03-28T19:42:43 ART" duration-ms="6691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchNotFound -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@3754a4bf]" started-at="2023-03-28T19:42:43 ART" name="afterClass" finished-at="2023-03-28T19:42:44 ART" duration-ms="1407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.automationtest.testng.DeleteEmployeeTest -->
+    </test> <!-- Delete Employee -->
+    <test started-at="2023-03-28T19:42:45 ART" name="Delete Newsfeed Post" finished-at="2023-03-28T19:43:10 ART" duration-ms="25388">
+      <class name="com.automationtest.testng.DeleteNewsfeedPostTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteNewsfeedPostTest@1d296da]" started-at="2023-03-28T19:42:45 ART" name="login" finished-at="2023-03-28T19:43:03 ART" duration-ms="18262" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="deleteBuzzNewsfeedPost()[pri:0, instance:com.automationtest.testng.DeleteNewsfeedPostTest@1d296da]" started-at="2023-03-28T19:43:03 ART" name="deleteBuzzNewsfeedPost" finished-at="2023-03-28T19:43:10 ART" duration-ms="6811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBuzzNewsfeedPost -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteNewsfeedPostTest@1d296da]" started-at="2023-03-28T19:43:10 ART" name="afterClass" finished-at="2023-03-28T19:43:10 ART" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.automationtest.testng.DeleteNewsfeedPostTest -->
+    </test> <!-- Delete Newsfeed Post -->
+  </suite> <!-- Delete custom field, termination reason, employee and newsfeed post -->
 </testng-results>

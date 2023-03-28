@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="New custom field and employee then delete both" parallel="false">	
-  <test name="New Custom Field">
+<suite name="Delete custom field, termination reason, employee and newsfeed post" parallel="false">	
+  <test name="Delete Custom Field">
       <classes>
-      <class name="com.automationtest.testng.NewCustomFieldDropDownTest"/>
+      <class name="com.automationtest.testng.DeleteCustomFieldTest"/>
       </classes>
   </test> <!-- Test --> 
    
-  <test name="New Employee">    
+  <test name="Delete Termination Reason">    
       <classes>
-      <class name="com.automationtest.testng.EditEmployeeAllTest"/>
+      <class name="com.automationtest.testng.DeleteTerminationReasonTest"/>
       </classes>
   </test> 
   
@@ -19,9 +19,9 @@
       </classes>
   </test>
   
-  <test name="Delete Custom Field">    
+  <test name="Delete Newsfeed Post">    
       <classes>
-      <class name="com.automationtest.testng.DeleteCustomFieldTest"/>
+      <class name="com.automationtest.testng.DeleteNewsfeedPostTest"/>
       </classes>
   </test>
 </suite> 
