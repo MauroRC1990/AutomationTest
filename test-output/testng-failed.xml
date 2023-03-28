@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automationtest.testng.NewCustomFieldTest">
+      <class name="com.automationtest.testng.DeleteTerminationReasonTest">
         <methods>
-          <include name="afterClass"/>
           <include name="login"/>
-          <include name="newCustomField"/>
+          <include name="newTerminationReason"/>
+          <include name="afterClass"/>
         </methods>
-      </class> <!-- com.automationtest.testng.NewCustomFieldTest -->
+      </class> <!-- com.automationtest.testng.DeleteTerminationReasonTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

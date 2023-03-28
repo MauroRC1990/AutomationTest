@@ -55,7 +55,7 @@ public class OrangeHRMPage {
 	WebElement customFieldsOption;
 	
 	@FindBy(xpath="//button[text()=' Add ']")
-	WebElement addCustomFieldBtn;
+	WebElement addBtn;
 	
 	@FindBy(xpath="//label[text()='Field Name']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
 	WebElement fieldNameInput;
@@ -77,6 +77,18 @@ public class OrangeHRMPage {
 	
 	@FindBy(xpath="//label[text()='Select Options']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
 	WebElement optionsField;
+	
+	
+	@FindBy(xpath="//div[text()='Career Path']//ancestor::div[@class='oxd-table-row oxd-table-row--with-border']//child::i[@class='oxd-icon bi-trash']")
+	WebElement customFieldDeleteBtn;
+	
+	
+	
+	@FindBy(xpath="//a[text()='Termination Reasons']")
+	WebElement terminationReasonsTab;
+	
+	@FindBy(xpath="//div[text()='KIA']//ancestor::div[@class='oxd-table-row oxd-table-row--with-border']//child::i[@class='oxd-icon bi-trash']")
+	WebElement deleteTerminationReasonBtn;
 	
 	
 	
@@ -136,8 +148,15 @@ public class OrangeHRMPage {
 	@FindBy(xpath="//div[text()='-- Select --']")
 	WebElement noBloodType;
 
-
-
+	@FindBy(xpath="//label[text()='Career Path']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
+	WebElement careerPathField;
+	
+	@FindBy(xpath="//label[text()='Career Path']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::i")
+	WebElement careerPathOptions;
+	
+	@FindBy(xpath="//span[text()='Engineer']")
+	WebElement engineerOption;
+	
 	@FindBy(xpath="//a[text()='Contact Details']")
 	WebElement contactDetailsTab;
 
@@ -165,7 +184,7 @@ public class OrangeHRMPage {
 	WebElement addEmergencyContactBtn;
 
 	@FindBy(xpath="//label[text()='Name']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
-	WebElement contactNameField;
+	WebElement nameField;
 
 	@FindBy(xpath="//label[text()='Relationship']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
 	WebElement relationshipField;
@@ -187,8 +206,6 @@ public class OrangeHRMPage {
 	@FindBy(xpath="//span[text()='Child']//parent::div")
 	WebElement childOption;
 
-	@FindBy(xpath="//label[text()='Name']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
-	WebElement dependentNameField;
 
 
 
@@ -389,13 +406,14 @@ public class OrangeHRMPage {
 		configurationTab.click();
 	}
 	
+	
 	public void selectCustomFieldsOption() {
 		customFieldsOption.click();
 	}
 	
 	public void addCustomField() {
 		waitForVisibilityOfElement("//button[text()=' Add ']");
-		addCustomFieldBtn.click();
+		addBtn.click();
 	}
 	
 	public void setfieldName(String fieldName) {
@@ -426,6 +444,32 @@ public class OrangeHRMPage {
 	public void setOptionsField(String options) {
 		optionsField.sendKeys(options);
 	}
+	
+	public void selectCustomFieldDeleteBtn() {
+		waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
+		waitForVisibilityOfElement("//div[text()='Career Path']//ancestor::div[@class='oxd-table-row oxd-table-row--with-border']//child::i[@class='oxd-icon bi-trash']");
+		customFieldDeleteBtn.click();
+	}
+	
+	public void selectTerminationReasonsTab() {
+		terminationReasonsTab.click();
+	}
+	
+	public void addTerminationReason() {
+		waitForVisibilityOfElement("//button[text()=' Add ']");
+		addBtn.click();
+	}
+	
+	public void setTerminationName(String terminationName) {
+		waitForVisibilityOfElement("//label[text()='Name']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input");
+		nameField.sendKeys(terminationName);
+	}
+	
+	public void deleteTerminationReason() {
+		waitForVisibilityOfElement("//div[text()='KIA']//ancestor::div[@class='oxd-table-row oxd-table-row--with-border']//child::i[@class='oxd-icon bi-trash']");
+		deleteTerminationReasonBtn.click();
+	}
+	
 	
 	
 	
@@ -509,6 +553,18 @@ public class OrangeHRMPage {
 		noBloodType.click();
 	}
 
+	public void setCareerPathField(String careerPath) {
+		careerPathField.sendKeys(careerPath);
+	}
+	
+	public void selectCareerPathOptions() {
+		careerPathOptions.click();
+	}
+	
+	public void selectEngineerOption() {
+		engineerOption.click();
+	}
+	
 	public void saveCustomFields() {
 		saveCustomFieldsBtn.click();
 	}
@@ -570,9 +626,9 @@ public class OrangeHRMPage {
 	}
 
 	public void setDependentName(String dependentName) {
-		dependentNameField.sendKeys(Keys.CONTROL + "a");
-		dependentNameField.sendKeys(Keys.DELETE);
-		dependentNameField.sendKeys(dependentName);
+		nameField.sendKeys(Keys.CONTROL + "a");
+		nameField.sendKeys(Keys.DELETE);
+		nameField.sendKeys(dependentName);
 	}
 
 
@@ -589,7 +645,7 @@ public class OrangeHRMPage {
 	}
 
 	public void setContactName(String contactName) {
-		contactNameField.sendKeys(contactName);
+		nameField.sendKeys(contactName);
 	}
 
 	public void setRelationship(String relationship) {

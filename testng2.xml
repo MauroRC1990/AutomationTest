@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Create Two Employees Suite" parallel="false">	
-  <test name="Employee1Test">
+<suite name="New custom field and employee" parallel="false">	
+  <test name="Custom Field">
       <classes>
-      <class name="com.automationtest.testng.NewEmployeeTest"/>
+      <class name="com.automationtest.testng.NewCustomFieldDropDownTest"/>
       </classes>
   </test> <!-- Test --> 
    
-  <test name="Employee2Test">    
+  <test name="Employee">    
     <classes>
-       <class name="com.automationtest.testng.NewEmployee2Test"/>
+       <class name="com.automationtest.testng.EditEmployeeAllTest"/>
     </classes>
      
   </test> <!-- Test -->

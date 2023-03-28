@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 
 import com.automationtest.pom.OrangeHRMPage;
 
-public class NewCustomFieldTest {
+public class DeleteTerminationReasonTest {
 
 	WebDriver driver;
 	Wait<WebDriver> wait;
@@ -44,32 +44,27 @@ public class NewCustomFieldTest {
 
 
 	@Test
-	public void newCustomField() {
+	public void newTerminationReason() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.selectPimTab();
 		orangeHRMPage.selectConfigurationTab();
-		orangeHRMPage.selectCustomFieldsOption();
-		orangeHRMPage.addCustomField();
-		orangeHRMPage.setfieldName("Career Path");
-		orangeHRMPage.selectScreenOptions();
-		orangeHRMPage.selectPersonalDetailsOption();
-		orangeHRMPage.selectTypeOptions();
-		orangeHRMPage.selectTextOrNumberOption();		
-		orangeHRMPage.save();
+		orangeHRMPage.selectTerminationReasonsTab();
+		orangeHRMPage.deleteTerminationReason();
+		orangeHRMPage.confirmDelete();
 
-		orangeHRMPage.waitForVisibilityOfElement("//h6[text()='Custom Fields']");
+		orangeHRMPage.waitForVisibilityOfElement("//p[text()='Termination Reasons']");
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\NewCustomFieldScreenshot.png"));
+			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\DeleteTerminationReasonScreenshot.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		boolean expectedValue = true;
-		boolean realValue = driver.findElement(By.xpath("//h6[text()='Custom Fields']")).isDisplayed();
+		boolean realValue = driver.findElement(By.xpath("//p[text()='Termination Reasons']")).isDisplayed();
 		Assert.assertEquals(expectedValue, realValue);
 	}
 
