@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Delete custom field, termination reason, employee and newsfeed post" parallel="false">	
+<suite name="New custom field, termination reason, employee and newsfeed post" parallel="tests">	
   <test name="Delete Custom Field">
       <classes>
-      <class name="com.automationtest.testng.DeleteCustomFieldTest"/>
+      <class name="com.automationtest.testng.NewCustomFieldDropDownTest"/>
       </classes>
   </test> <!-- Test --> 
    
-  <test name="Delete Termination Reason">    
+  <test name="New Termination Reason">    
       <classes>
-      <class name="com.automationtest.testng.DeleteTerminationReasonTest"/>
+      <class name="com.automationtest.testng.NewTerminationReasonTest"/>
       </classes>
   </test> 
   
-  <test name="Delete Employee">    
+  <test name="New Employee">    
       <classes>
-      <class name="com.automationtest.testng.DeleteEmployeeTest"/>
+      <class name="com.automationtest.testng.NewEmployeeTest"/>
       </classes>
   </test>
   
-  <test name="Delete Newsfeed Post">    
+  <test name="New Newsfeed Post">    
       <classes>
-      <class name="com.automationtest.testng.DeleteNewsfeedPostTest"/>
+      <class name="com.automationtest.testng.PostOnNewsfeedTest"/>
       </classes>
   </test>
 </suite> 
