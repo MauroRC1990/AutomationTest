@@ -87,7 +87,12 @@ public class EditEmployeeJobTest {
 		orangeHRMPage.setDateOfBirth("2187-11-18");
 		orangeHRMPage.setDependentName("Kaidan");
 		orangeHRMPage.save();
-		
+	}
+
+
+	@Test
+	public void editEmployeeJob() {
+		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.selectJobTab();
 		orangeHRMPage.setJoinedDate("2172-04-11");
 		orangeHRMPage.selectJobTitleOptions();
@@ -99,33 +104,19 @@ public class EditEmployeeJobTest {
 		orangeHRMPage.selectEmploymentStatusOptions();
 		orangeHRMPage.selectFullTimePermanent();
 		orangeHRMPage.save();
-	}
-
-
-	@Test
-	public void editEmployeeQualifications() {
-		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
-		orangeHRMPage.selectQualificationsTab();
-		orangeHRMPage.selectAddWorkExperience();
-		orangeHRMPage.setCompany("Alliance Military");
-		orangeHRMPage.setJobTitle("Commanding Officer");
-		orangeHRMPage.setDateFrom("04-11-2172");
-		orangeHRMPage.setDateTo("04-11-2187");
-		orangeHRMPage.setComment("Retired from active service with honors.");
-		orangeHRMPage.save();
 
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\QualificationsScreenshot.png"));
+			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\JobScreenshot.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		boolean expectedValue = true;
-		boolean realValue = driver.findElement(By.xpath("//div[text()='Alliance Military']")).isDisplayed();
+		boolean realValue = driver.findElement(By.xpath("//div[text()='Software Engineer']")).isDisplayed();
 		Assert.assertEquals(expectedValue, realValue);
 	}
 

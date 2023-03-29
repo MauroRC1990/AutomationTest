@@ -162,7 +162,7 @@ public class EditEmployeeAllTest {
 		orangeHRMPage.setJobTitle("Commanding Officer");
 		orangeHRMPage.setDateFrom("04-11-2172");
 		orangeHRMPage.setDateTo("04-11-2187");
-		orangeHRMPage.setComment("Retired from active service with honors.");
+		orangeHRMPage.setComment("Retired from active service with honors");
 		orangeHRMPage.save();
 
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");

@@ -328,9 +328,22 @@ public class OrangeHRMPage {
 	@FindBy(xpath="//label[text()='Yes']")
 	WebElement smokerYesOption;
 
+	
+	
+	@FindBy(xpath="//span[text()='Admin']")
+	WebElement adminTab;
+	
+	@FindBy(xpath="//span[text()='Qualifications ']")
+	WebElement adminQualificationsTab;
 
-
-
+	@FindBy(xpath="//a[text()='Skills']")
+	WebElement skillsTab;
+	
+	
+	
+	
+	
+	
 
 	public OrangeHRMPage (WebDriver driver, Wait<WebDriver> wait){
 		this.driver=driver;
@@ -843,6 +856,35 @@ public class OrangeHRMPage {
 	}
 
 
+	
+	public void selectAdminTab() {
+		adminTab.click();
+	}
+	
+	public void selectAdminQualificationsTab() {
+		waitForVisibilityOfElement("//span[text()='Qualifications ']");
+		adminQualificationsTab.click();
+	}
+	
+	public void selectSkillsTab() {
+		skillsTab.click();
+	}
+	
+	public void addSkill() {
+		waitForVisibilityOfElement("//button[text()=' Add ']");
+		addBtn.click();
+	}
+	
+	public void setSkillName(String skillName) {
+		waitForVisibilityOfElement("//label[text()='Name']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input");
+		nameField.sendKeys(skillName);
+	}
+	
+	public void setSkillDescription(String skillDescription) {
+		commentField.sendKeys(skillDescription);
+	}
+	
+	
 
 	public void setEmployeeNameSearch(String employeeName) {
 		waitForVisibilityOfElement("//label[text()='Employee Name']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input");
