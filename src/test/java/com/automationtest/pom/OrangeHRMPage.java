@@ -220,7 +220,7 @@ public class OrangeHRMPage {
 	@FindBy(xpath="//a[text()='Job']")
 	WebElement jobTab;
 
-	@FindBy(xpath="//input[@placeholder='yyyy-mm-dd']")
+	@FindBy(xpath="//label[text()='Joined Date']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
 	WebElement joinedDateField;
 
 	@FindBy(xpath="//label[text()='Job Title']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::div[@class='oxd-select-text oxd-select-text--active']")
@@ -247,8 +247,31 @@ public class OrangeHRMPage {
 	@FindBy(xpath="//span[text()='Full-Time Permanent']//parent::div")
 	WebElement fullTimePermanentOption;
 
-
-
+	
+	
+	@FindBy(xpath="//a[text()='Qualifications']")
+	WebElement qualificationsTab;
+	
+	@FindBy(xpath="//h6[text()='Work Experience']//ancestor::div[@class='orangehrm-action-header']//child::button")
+	WebElement addWorkExperienceBtn;
+	
+	@FindBy(xpath="//label[text()='Company']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
+	WebElement companyField;
+	
+	@FindBy(xpath="//label[text()='Job Title']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
+	WebElement jobTitleField;
+	
+	@FindBy(xpath="//label[text()='From']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
+	WebElement dateFromField;
+	
+	@FindBy(xpath="//label[text()='To']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
+	WebElement dateToField;
+	
+	@FindBy(xpath="//textarea[@class='oxd-textarea oxd-textarea--active oxd-textarea--resize-vertical']")
+	WebElement commentField;
+	
+	
+	
 	@FindBy(xpath="//span[text()='Buzz']")
 	WebElement buzzTab;
 
@@ -684,7 +707,7 @@ public class OrangeHRMPage {
 	}
 
 	public void setJoinedDate(String joinedDate) {
-		waitForVisibilityOfElement("//input[@placeholder='yyyy-mm-dd']");
+		waitForVisibilityOfElement("//label[text()='Joined Date']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input");
 		joinedDateField.sendKeys(joinedDate);
 	}
 
@@ -722,7 +745,39 @@ public class OrangeHRMPage {
 		fullTimePermanentOption.click();
 	}
 
+	
+	
+	
+	public void selectQualificationsTab() {
+		qualificationsTab.click();
+	}
+	
+	public void selectAddWorkExperience() {
+		waitForVisibilityOfElement("//h6[text()='Work Experience']//ancestor::div[@class='orangehrm-action-header']//child::button");
+		addWorkExperienceBtn.click();
+	}
 
+	public void setCompany(String company) {
+		companyField.sendKeys(company);
+	}
+	
+	public void setJobTitle(String jobTitle) {
+		jobTitleField.sendKeys(jobTitle);
+	}
+	
+	public void setDateFrom(String date) {
+		dateFromField.sendKeys(date);
+	}
+	
+	public void setDateTo(String date) {
+		dateToField.sendKeys(date);
+	}
+	
+	public void setComment(String comment) {
+		commentField.sendKeys(comment);
+	}
+		
+	
 
 
 	public void selectBuzzTab() {

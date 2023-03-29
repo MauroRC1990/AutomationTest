@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automationtest.testng.LogoutTest">
+      <class name="com.automationtest.testng.EditEmployeeAllTest">
         <methods>
-          <include name="loginAndLogout"/>
+          <include name="editEmployee"/>
           <include name="afterClass"/>
-          <include name="openBrowser"/>
+          <include name="loginAndAddEmployee"/>
         </methods>
-      </class> <!-- com.automationtest.testng.LogoutTest -->
+      </class> <!-- com.automationtest.testng.EditEmployeeAllTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

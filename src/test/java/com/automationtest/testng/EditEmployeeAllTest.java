@@ -67,8 +67,8 @@ public class EditEmployeeAllTest {
 		orangeHRMPage.savePersonalDetails();
 		orangeHRMPage.selectBloodTypeOptions();
 		orangeHRMPage.selectBloodTypeAPositive();
-		orangeHRMPage.selectCareerPathOptions();
-		orangeHRMPage.selectEngineerOption();
+//		orangeHRMPage.selectCareerPathOptions();
+//		orangeHRMPage.selectEngineerOption();
 		orangeHRMPage.saveCustomFields();
 
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
@@ -156,8 +156,27 @@ public class EditEmployeeAllTest {
 			e.printStackTrace();
 		}
 
+		orangeHRMPage.selectQualificationsTab();
+		orangeHRMPage.selectAddWorkExperience();
+		orangeHRMPage.setCompany("Alliance Military");
+		orangeHRMPage.setJobTitle("Commanding Officer");
+		orangeHRMPage.setDateFrom("04-11-2172");
+		orangeHRMPage.setDateTo("04-11-2187");
+		orangeHRMPage.setComment("Retired from active service with honors.");
+		orangeHRMPage.save();
+
+		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
+
+		File file5 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(file5, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\QualificationsScreenshot.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		boolean expectedValue = true;
-		boolean realValue = driver.findElement(By.xpath("//div[text()='Software Engineer']")).isDisplayed();
+		boolean realValue = driver.findElement(By.xpath("//div[text()='Alliance Military']")).isDisplayed();
 		Assert.assertEquals(expectedValue, realValue);
 	}
 
