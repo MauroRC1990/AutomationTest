@@ -8,47 +8,11 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Delete custom field, termination reason, employee and newsfeed post</th></tr>
-<tr><td><a href="#t0">Delete Employee</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">39.984</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Delete Newsfeed Post</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">43.853</td><td></td><td></td></tr>
-<tr><td><a href="#t2">Delete Termination Reason</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">44.626</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t3">Delete Custom Field</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">44.703</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">3</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">173.166</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">28.525</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Delete custom field, termination reason, employee and newsfeed post</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Delete Employee &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.automationtest.testng.DeleteEmployeeTest</td><td><a href="#m0">searchNotFound</a></td><td rowspan="1">1680045806896</td><td rowspan="1">9032</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Delete Newsfeed Post &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.automationtest.testng.DeleteNewsfeedPostTest</td><td><a href="#m1">deleteBuzzNewsfeedPost</a></td><td rowspan="1">1680045808697</td><td rowspan="1">8615</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">Delete Termination Reason &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.automationtest.testng.DeleteTerminationReasonTest</td><td><a href="#m2">newTerminationReason</a></td><td rowspan="1">1680045808292</td><td rowspan="1">11861</td></tr></tbody>
-<tbody id="t3"><tr><th colspan="4">Delete Custom Field &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.automationtest.testng.DeleteCustomFieldTest</td><td><a href="#m3">newCustomField</a></td><td rowspan="1">1680045807229</td><td rowspan="1">12925</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.automationtest.testng.DeleteNewsfeedPostTest</td><td><a href="#m0">deleteBuzzNewsfeedPost</a></td><td rowspan="1">1680050866283</td><td rowspan="1">7389</td></tr></tbody>
 </table>
-<h2>Delete Employee</h2><h3 id="m0">com.automationtest.testng.DeleteEmployeeTest#searchNotFound</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[text()=&apos;Successfully Deleted&apos;]&quot;}
-  (Session info: chrome=111.0.5563.146)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c1d8b25baab20e0530988af446c3f366, findElement {using=xpath, value=//p[text()=&apos;Successfully Deleted&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\Solidus\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57796}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57796/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c1d8b25baab20e0530988af446c3f366
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at com.automationtest.testng.DeleteEmployeeTest.searchNotFound(DeleteEmployeeTest.java:65)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Delete Newsfeed Post</h2><h3 id="m1">com.automationtest.testng.DeleteNewsfeedPostTest#deleteBuzzNewsfeedPost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Delete Termination Reason</h2><h3 id="m2">com.automationtest.testng.DeleteTerminationReasonTest#newTerminationReason</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Delete Custom Field</h2><h3 id="m3">com.automationtest.testng.DeleteCustomFieldTest#newCustomField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">com.automationtest.testng.DeleteNewsfeedPostTest#deleteBuzzNewsfeedPost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

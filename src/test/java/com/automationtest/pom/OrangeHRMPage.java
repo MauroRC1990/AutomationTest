@@ -29,7 +29,15 @@ public class OrangeHRMPage {
 	@FindBy(xpath="//button[@type='submit']")
 	WebElement submitBtn;
 
-
+	
+	
+	@FindBy(xpath="//span[@class='oxd-userdropdown-tab']")
+	WebElement userDropdownBtn;
+	
+	@FindBy(xpath="//a[text()='Logout']")
+	WebElement logoutBtn;
+	
+	
 
 	@FindBy(xpath="//span[text()='PIM']")
 	WebElement pimTab;
@@ -366,6 +374,18 @@ public class OrangeHRMPage {
 		submitBtn.click();
 	}
 
+	
+	
+	
+	public void selectUserDropdownOptions() {
+		waitForVisibilityOfElement("//span[@class='oxd-userdropdown-tab']");
+		userDropdownBtn.click();
+	}
+	
+	public void selectLogoutOption() {
+		logoutBtn.click();
+	}
+		
 
 
 

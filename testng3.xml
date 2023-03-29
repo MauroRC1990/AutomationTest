@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Login, delete custom field, termination reason, employee, newsfeed post and logout" parallel="tests">	
+  <test name="Login">
+      <classes>
+      <class name="com.automationtest.testng.LoginTest"/>
+      </classes>
+  </test> 
+  
+  <test name="Delete Employee">
+      <classes>
+      <class name="com.automationtest.testng.DeleteEmployeeTest"/>
+      </classes>
+  </test>  
+   
+  <test name="Delete Termination Reason">    
+      <classes>
+      <class name="com.automationtest.testng.DeleteTerminationReasonTest"/>
+      </classes>
+  </test> 
+  
+  <test name="Delete Custom Field">    
+      <classes>
+      <class name="com.automationtest.testng.DeleteCustomFieldTest"/>
+      </classes>
+  </test>
+  
+  <test name="Delete Newsfeed Post">    
+      <classes>
+      <class name="com.automationtest.testng.DeleteNewsfeedPostTest"/>
+      </classes>
+  </test>
+
+  <test name="Logout">    
+      <classes>
+      <class name="com.automationtest.testng.LogoutTest"/>
+      </classes>
+  </test>  
+</suite> 

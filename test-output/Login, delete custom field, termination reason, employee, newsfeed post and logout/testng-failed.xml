@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Login, delete custom field, termination reason, employee, newsfeed post and logout]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Delete Newsfeed Post(failed)">
+    <classes>
+      <class name="com.automationtest.testng.DeleteNewsfeedPostTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="deleteBuzzNewsfeedPost"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.automationtest.testng.DeleteNewsfeedPostTest -->
+    </classes>
+  </test> <!-- Delete Newsfeed Post(failed) -->
+</suite> <!-- Failed suite [Login, delete custom field, termination reason, employee, newsfeed post and logout] -->

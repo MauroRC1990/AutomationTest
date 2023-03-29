@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="New custom field, termination reason, employee and newsfeed post" parallel="tests">	
-  <test name="Delete Custom Field">
+<suite name="Login, new custom field, termination reason, employee, newsfeed post and logout" parallel="tests">	
+  <test name="Login">
+      <classes>
+      <class name="com.automationtest.testng.LoginTest"/>
+      </classes>
+  </test> 
+  
+  <test name="New Custom Field">
       <classes>
       <class name="com.automationtest.testng.NewCustomFieldDropDownTest"/>
       </classes>
-  </test> <!-- Test --> 
+  </test>  
    
   <test name="New Termination Reason">    
       <classes>
@@ -24,4 +30,10 @@
       <class name="com.automationtest.testng.PostOnNewsfeedTest"/>
       </classes>
   </test>
+
+  <test name="Logout">    
+      <classes>
+      <class name="com.automationtest.testng.LogoutTest"/>
+      </classes>
+  </test>  
 </suite> 

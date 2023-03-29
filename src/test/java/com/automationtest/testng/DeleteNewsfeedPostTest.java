@@ -52,6 +52,8 @@ public class DeleteNewsfeedPostTest {
 
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 		orangeHRMPage.waitForVisibilityOfElement("//p[text()='Successfully Deleted']");
+		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
+
 
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
