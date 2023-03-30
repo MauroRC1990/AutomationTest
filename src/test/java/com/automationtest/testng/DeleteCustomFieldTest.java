@@ -44,7 +44,7 @@ public class DeleteCustomFieldTest {
 
 
 	@Test
-	public void newCustomField() {
+	public void deleteCustomField() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.selectPimTab();
 		orangeHRMPage.selectConfigurationTab();

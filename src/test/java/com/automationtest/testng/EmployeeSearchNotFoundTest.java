@@ -44,7 +44,7 @@ public class EmployeeSearchNotFoundTest {
 
 
 	@Test
-	public void searchNotFound() {
+	public void searchEmployeeNotFound() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.selectPimTab();
 		orangeHRMPage.setEmployeeNameSearch("Noname");

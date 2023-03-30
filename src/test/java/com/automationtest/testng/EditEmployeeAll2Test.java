@@ -24,7 +24,7 @@ public class EditEmployeeAll2Test {
 
 
 	@BeforeClass
-	public void loginAndAddEmployee() {
+	public void loginAndAddEmployee2() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(options);
@@ -53,7 +53,7 @@ public class EditEmployeeAll2Test {
 
 
 	@Test
-	public void editEmployee() {
+	public void editEmployee2() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.setEmployeeId("5922-AC");
 		orangeHRMPage.selectNationalityOptions();

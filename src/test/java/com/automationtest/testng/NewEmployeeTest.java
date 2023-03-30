@@ -43,7 +43,7 @@ public class NewEmployeeTest {
 
 
 	@Test
-	public void newEmployee2() {
+	public void newEmployee() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.selectPimTab();
 		orangeHRMPage.selectAddEmployeeTab();

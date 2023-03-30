@@ -24,7 +24,7 @@ public class EditEmployeePersonalDetailsTest {
 
 
 	@BeforeClass
-	public void loginAndAddEmployee() {
+	public void stepsToReachPersonalDetails() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(options);

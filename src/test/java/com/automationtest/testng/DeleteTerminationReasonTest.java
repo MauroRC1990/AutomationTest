@@ -44,7 +44,7 @@ public class DeleteTerminationReasonTest {
 
 
 	@Test
-	public void newTerminationReason() {
+	public void deleteTerminationReason() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.selectPimTab();
 		orangeHRMPage.selectConfigurationTab();

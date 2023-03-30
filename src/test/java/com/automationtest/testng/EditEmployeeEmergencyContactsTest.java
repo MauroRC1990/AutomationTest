@@ -24,7 +24,7 @@ public class EditEmployeeEmergencyContactsTest {
 
 
 	@BeforeClass
-	public void loginAndAddEmployee() {
+	public void stepsToReachEmergencyContacts() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(options);
