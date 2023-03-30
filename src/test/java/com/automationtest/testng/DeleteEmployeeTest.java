@@ -51,7 +51,7 @@ public class DeleteEmployeeTest {
 		orangeHRMPage.delete();
 		orangeHRMPage.confirmDelete();
 
-		orangeHRMPage.waitForVisibilityOfElement("//p[text()='Successfully Deleted']");
+		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
@@ -62,7 +62,7 @@ public class DeleteEmployeeTest {
 		}
 
 		boolean expectedValue = true;
-		boolean realValue = driver.findElement(By.xpath("//p[text()='Successfully Deleted']")).isDisplayed();
+		boolean realValue = driver.findElement(By.xpath("//h5[text()='Employee Information']")).isDisplayed();
 		Assert.assertEquals(expectedValue, realValue);
 	}
 

@@ -67,8 +67,8 @@ public class EditEmployeeAllTest {
 		orangeHRMPage.savePersonalDetails();
 		orangeHRMPage.selectBloodTypeOptions();
 		orangeHRMPage.selectBloodTypeAPositive();
-//		orangeHRMPage.selectCareerPathOptions();
-//		orangeHRMPage.selectEngineerOption();
+		orangeHRMPage.selectCareerPathOptions();
+		orangeHRMPage.selectEngineerOption();
 		orangeHRMPage.saveCustomFields();
 
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");

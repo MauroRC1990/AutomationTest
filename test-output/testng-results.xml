@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-30T11:12:17 ART" name="Default suite" finished-at="2023-03-30T11:13:12 ART" duration-ms="54324">
+  <suite started-at="2023-03-30T19:07:19 ART" name="Default suite" finished-at="2023-03-30T19:07:50 ART" duration-ms="31064">
     <groups>
     </groups>
-    <test started-at="2023-03-30T11:12:17 ART" name="Default test" finished-at="2023-03-30T11:13:12 ART" duration-ms="54324">
-      <class name="com.automationtest.testng.EditEmployeeQualificationsTest">
-        <test-method is-config="true" signature="loginAndAddEmployee()[pri:0, instance:com.automationtest.testng.EditEmployeeQualificationsTest@74f0ea28]" started-at="2023-03-30T11:12:17 ART" name="loginAndAddEmployee" finished-at="2023-03-30T11:13:04 ART" duration-ms="46424" status="PASS">
+    <test started-at="2023-03-30T19:07:19 ART" name="Default test" finished-at="2023-03-30T19:07:50 ART" duration-ms="31064">
+      <class name="com.automationtest.testng.DeleteEmployeeTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@74f0ea28]" started-at="2023-03-30T19:07:19 ART" name="login" finished-at="2023-03-30T19:07:41 ART" duration-ms="21783" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginAndAddEmployee -->
-        <test-method signature="editEmployeeQualifications()[pri:0, instance:com.automationtest.testng.EditEmployeeQualificationsTest@74f0ea28]" started-at="2023-03-30T11:13:04 ART" name="editEmployeeQualifications" finished-at="2023-03-30T11:13:12 ART" duration-ms="7661" status="PASS">
+        </test-method> <!-- login -->
+        <test-method signature="searchNotFound()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@74f0ea28]" started-at="2023-03-30T19:07:41 ART" name="searchNotFound" finished-at="2023-03-30T19:07:50 ART" duration-ms="9041" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- editEmployeeQualifications -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.EditEmployeeQualificationsTest@74f0ea28]" started-at="2023-03-30T11:13:12 ART" name="afterClass" finished-at="2023-03-30T11:13:12 ART" duration-ms="190" status="PASS">
+        </test-method> <!-- searchNotFound -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@74f0ea28]" started-at="2023-03-30T19:07:50 ART" name="afterClass" finished-at="2023-03-30T19:07:50 ART" duration-ms="194" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.automationtest.testng.EditEmployeeQualificationsTest -->
+      </class> <!-- com.automationtest.testng.DeleteEmployeeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

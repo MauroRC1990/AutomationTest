@@ -361,8 +361,8 @@ public class OrangeHRMPage {
 	@FindBy(xpath="//a[text()='Skills']")
 	WebElement skillsTab;
 	
-	
-	
+	@FindBy(xpath="//div[text()='N7']//ancestor::div[@class='oxd-table-row oxd-table-row--with-border']//child::i[@class='oxd-icon bi-trash']")
+	WebElement deleteN7Btn;
 	
 	
 	
@@ -837,6 +837,7 @@ public class OrangeHRMPage {
 	
 	public void selectSaveSkill() {
 		saveSkillBtn.click();
+		((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
 	}
 	
 	
@@ -917,6 +918,12 @@ public class OrangeHRMPage {
 	
 	public void selectSkillsTab() {
 		skillsTab.click();
+	}
+	
+	public void selectDeleteN7Skill() {
+		waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
+		waitForVisibilityOfElement("//div[text()='N7']//ancestor::div[@class='oxd-table-row oxd-table-row--with-border']//child::i[@class='oxd-icon bi-trash']");
+		deleteN7Btn.click();
 	}
 	
 	public void addSkill() {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Login, new custom field, termination reason, employee, newsfeed post and logout" parallel="tests">	
+<suite name="Login, new custom field, termination reason, skill, employee, newsfeed post and logout" parallel="false">	
   <test name="Login">
       <classes>
       <class name="com.automationtest.testng.LoginTest"/>
@@ -19,9 +19,15 @@
       </classes>
   </test> 
   
+    <test name="New Skill">    
+      <classes>
+      <class name="com.automationtest.testng.NewSkillTest"/>
+      </classes>
+  </test>
+  
   <test name="New Employee">    
       <classes>
-      <class name="com.automationtest.testng.NewEmployeeTest"/>
+      <class name="com.automationtest.testng.EditEmployeeAllTest"/>
       </classes>
   </test>
   
