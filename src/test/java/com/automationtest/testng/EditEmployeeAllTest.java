@@ -160,10 +160,16 @@ public class EditEmployeeAllTest {
 		orangeHRMPage.selectAddWorkExperience();
 		orangeHRMPage.setCompany("Alliance Military");
 		orangeHRMPage.setJobTitle("Commanding Officer");
-		orangeHRMPage.setDateFrom("04-11-2172");
-		orangeHRMPage.setDateTo("04-11-2187");
-		orangeHRMPage.setComment("Retired from active service with honors");
+		orangeHRMPage.setDateFrom("2172-04-11");
+		orangeHRMPage.setDateTo("2187-04-11");
+		orangeHRMPage.setWorkExperienceComment("Retired from active service with honors");
 		orangeHRMPage.save();
+		orangeHRMPage.selectAddSkills();
+		orangeHRMPage.selectSkillOptions();
+		orangeHRMPage.selectN7Option();
+		orangeHRMPage.setYearsOfExperience("6");
+		orangeHRMPage.setSkillComment("One of 300 out of 750 to graduate");
+		orangeHRMPage.selectSaveSkill();
 
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 
@@ -176,7 +182,7 @@ public class EditEmployeeAllTest {
 		}
 		
 		boolean expectedValue = true;
-		boolean realValue = driver.findElement(By.xpath("//div[text()='Alliance Military']")).isDisplayed();
+		boolean realValue = driver.findElement(By.xpath("//div[text()='N7']")).isDisplayed();
 		Assert.assertEquals(expectedValue, realValue);
 	}
 

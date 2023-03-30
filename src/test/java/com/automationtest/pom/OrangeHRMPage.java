@@ -268,7 +268,29 @@ public class OrangeHRMPage {
 	WebElement dateToField;
 	
 	@FindBy(xpath="//textarea[@class='oxd-textarea oxd-textarea--active oxd-textarea--resize-vertical']")
-	WebElement commentField;
+	WebElement workExperienceCommentField;
+	
+	@FindBy(xpath="//h6[text()='Education']")
+	WebElement educationTitle;
+	
+	@FindBy(xpath="//h6[text()='Skills']//parent::div//child::button")
+	WebElement addSkillsBtn;
+	
+	@FindBy(xpath="//label[text()='Skill']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow']")
+	WebElement skillOptions;
+	
+	@FindBy(xpath="//span[text()='N7']//parent::div")
+	WebElement n7Option;
+	
+	@FindBy(xpath="//label[text()='Years of Experience']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::input")
+	WebElement yearsOfExperienceField;
+	
+	@FindBy(xpath="//label[text()='Comments']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//child::textarea")
+	WebElement skillCommentsField;
+	
+	@FindBy(xpath="//h6[text()='Add Skill']//ancestor::div[@class='orangehrm-horizontal-padding orangehrm-top-padding']//child::button[@type='submit']")
+	WebElement saveSkillBtn;
+	
 	
 	
 	
@@ -786,13 +808,40 @@ public class OrangeHRMPage {
 		dateToField.sendKeys(date);
 	}
 	
-	public void setComment(String comment) {
-		commentField.sendKeys(comment);
+	public void setWorkExperienceComment(String comment) {
+		workExperienceCommentField.sendKeys(comment);
 	}
 		
+	public void selectAddSkills() {
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", educationTitle);
+		waitForVisibilityOfElement("//h6[text()='Skills']//parent::div//child::button");
+		addSkillsBtn.click();
+	}
+
+	public void selectSkillOptions() {
+		skillOptions.click();
+	}
+	
+	public void selectN7Option() {
+		waitForVisibilityOfElement("//span[text()='N7']//parent::div");
+		n7Option.click();
+	}
+	
+	public void setYearsOfExperience(String yearsOfExperience) {
+		yearsOfExperienceField.sendKeys(yearsOfExperience);
+	}
+	
+	public void setSkillComment(String comment) {
+		skillCommentsField.sendKeys(comment);
+	}
+	
+	public void selectSaveSkill() {
+		saveSkillBtn.click();
+	}
+	
 	
 
-
+	
 	public void selectBuzzTab() {
 		buzzTab.click();
 	}
@@ -881,7 +930,7 @@ public class OrangeHRMPage {
 	}
 	
 	public void setSkillDescription(String skillDescription) {
-		commentField.sendKeys(skillDescription);
+		workExperienceCommentField.sendKeys(skillDescription);
 	}
 	
 	
