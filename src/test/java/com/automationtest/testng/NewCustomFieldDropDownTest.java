@@ -58,12 +58,12 @@ public class NewCustomFieldDropDownTest {
 		orangeHRMPage.selectConfigurationTab();
 		orangeHRMPage.selectCustomFieldsOption();
 		orangeHRMPage.addCustomField();
-		orangeHRMPage.setfieldName(testValuesReader.getValue("customfieldname"));
+		orangeHRMPage.setfieldName(testValuesReader.getValue("customFieldName"));
 		orangeHRMPage.selectScreenOptions();
 		orangeHRMPage.selectPersonalDetailsOption();
 		orangeHRMPage.selectTypeOptions();
 		orangeHRMPage.selectDropDownOption();
-		orangeHRMPage.setOptionsField(testValuesReader.getValue("customfieldoptions"));
+		orangeHRMPage.setOptionsField(testValuesReader.getValue("customFieldOptions"));
 		orangeHRMPage.save();
 
 		orangeHRMPage.waitForVisibilityOfElement("//h6[text()='Custom Fields']");
@@ -85,6 +85,10 @@ public class NewCustomFieldDropDownTest {
 
 	@AfterClass
 	public void afterClass() {
+		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
+		orangeHRMPage.selectUserDropdownOptions();
+		orangeHRMPage.selectLogoutOption();
+		orangeHRMPage.waitForVisibilityOfElement("//div[@class='orangehrm-login-branding']");
 		driver.quit();
 	}
 }

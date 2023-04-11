@@ -55,9 +55,9 @@ public class NewEmployee2Test {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.selectPimTab();
 		orangeHRMPage.selectAddEmployeeTab();
-		orangeHRMPage.setfirstName(testValuesReader.getValue("employee2firstname"));
-		orangeHRMPage.setlastName(testValuesReader.getValue("employee1lastname"));
-		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee2id"));
+		orangeHRMPage.setfirstName(testValuesReader.getValue("employee2FirstName"));
+		orangeHRMPage.setlastName(testValuesReader.getValue("employee1LastName"));
+		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee2Id"));
 		orangeHRMPage.save();
 
 		orangeHRMPage.waitForPresenceOfElement("//h6[text()='Personal Details']");
@@ -79,6 +79,10 @@ public class NewEmployee2Test {
 
 	@AfterClass
 	public void afterClass() {
+		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
+		orangeHRMPage.selectUserDropdownOptions();
+		orangeHRMPage.selectLogoutOption();
+		orangeHRMPage.waitForVisibilityOfElement("//div[@class='orangehrm-login-branding']");
 		driver.quit();
 	}
 }

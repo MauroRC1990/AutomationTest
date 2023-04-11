@@ -58,7 +58,7 @@ public class NewTerminationReasonTest {
 		orangeHRMPage.selectConfigurationTab();
 		orangeHRMPage.selectTerminationReasonsTab();
 		orangeHRMPage.addTerminationReason();
-		orangeHRMPage.setTerminationName(testValuesReader.getValue("terminationname"));
+		orangeHRMPage.setTerminationName(testValuesReader.getValue("terminationName"));
 		orangeHRMPage.save();
 
 		orangeHRMPage.waitForVisibilityOfElement("//p[text()='Termination Reasons']");
@@ -80,6 +80,10 @@ public class NewTerminationReasonTest {
 
 	@AfterClass
 	public void afterClass() {
+		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
+		orangeHRMPage.selectUserDropdownOptions();
+		orangeHRMPage.selectLogoutOption();
+		orangeHRMPage.waitForVisibilityOfElement("//div[@class='orangehrm-login-branding']");
 		driver.quit();
 	}
 }
