@@ -55,7 +55,7 @@ public class DeleteEmployeeTest {
 	public void deleteEmployee() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.selectPimTab();
-		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee1id"));
+		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee1Id"));
 		orangeHRMPage.search();
 		orangeHRMPage.delete();
 		orangeHRMPage.confirmDelete();
@@ -78,6 +78,10 @@ public class DeleteEmployeeTest {
 
 	@AfterClass
 	public void afterClass() {
+		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
+		orangeHRMPage.selectUserDropdownOptions();
+		orangeHRMPage.selectLogoutOption();
+		orangeHRMPage.waitForVisibilityOfElement("//div[@class='orangehrm-login-branding']");
 		driver.quit();
 	}
 }

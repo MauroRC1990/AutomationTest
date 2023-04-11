@@ -1,54 +1,54 @@
 url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 user=Admin
 password=admin123
-adminfirstname=Paul
-adminmiddlename=
-adminlastname=Collings
-adminnickname=
-admindateofbirth=1975-10-15
-adminmilitaryservice=
+adminFirstName=Paul
+adminMiddleName=
+adminLastName=Collings
+adminNickname=
+adminDateOfBirth=1975-10-15
+adminMilitaryService=
 
-employee1firstname=John
-employee1middlename=Adrian
-employee1lastname=Shepard
-employee1id=5923-AC
-employee1nickname=Skipper
-employee1dateofbirth=2154-04-11
-employee1militaryservice=Commander
+employee1FirstName=John
+employee1MiddleName=Adrian
+employee1LastName=Shepard
+employee1Id=5923-AC
+employee1Nickname=Skipper
+employee1DateOfBirth=2154-04-11
+employee1MilitaryService=Commander
 
-employee2firstname=Jane
-employee2middlename=Elizabeth
-employee2id=5922-AC
+employee2FirstName=Jane
+employee2MiddleName=Elizabeth
+employee2Id=5922-AC
 
-employeestreet1=Silversun Strip
-employeecity=Tiberius Towers
-employeestateorprovince=Citadel
+employeeStreet1=Silversun Strip
+employeeCity=Tiberius Towers
+employeeStateOrProvince=Citadel
 
-employeeemergencycontactname=Jeff Moreau
-employeeemergencycontactrelationship=Pilot
-employeeemergencycontacthometelephone=628-2002
+employeeEmergencyContactName=Jeff Moreau
+employeeEmergencyContactRelationship=Pilot
+employeeEmergencyContactHomeTelephone=628-2002
 
-employeedependentdateofbirth=2187-11-18
-employeedependentname=Kaidan
+employeeDependentDateOfBirth=2187-11-18
+employeeDependentName=Kaidan
 
-employeejobjoineddate=2172-04-11
+employeeJobJoinedDate=2172-04-11
 
-employeequalificationscompany=Alliance Military
-employeequalificationsjobtitle=Commanding Officer
-employeequalificationsdatefrom=2172-04-11
-employeequalificationsdateto=2187-04-11
-employeequalificationsworkexperiencecomment=Retired from active service with honors
-employeequalificationsyearsofexperience=6
-employeequalificationsskillcomments=One of 300 out of 750 to graduate
+employeeQualificationsCompany=Alliance Military
+employeeQualificationsJobTitle=Commanding Officer
+employeeQualificationsDateFrom=2172-04-11
+employeeQualificationsDateTo=2187-04-11
+employeeQualificationsWorkExperienceComment=Retired from active service with honors
+employeeQualificationsYearsOfExperience=6
+employeeQualificationsSkillComments=One of 300 out of 750 to graduate
 
-employeenamesearch=Noname
+employeeNameSearch=Noname
 
-customfieldname=Career Path
-customfieldoptions=Soldier,Infiltrator,Sentinel,Adept,Engineer,Vanguard
+customFieldName=Career Path
+customFieldOptions=Soldier,Infiltrator,Sentinel,Adept,Engineer,Vanguard
 
-skillname=N7
-skilldescription=Elite training program
+skillName=N7
+skillDescription=Elite training program
 
-terminationname=KIA
+terminationName=KIA
 
-writepost=Hello, this post is part of an automation test, we apologize for the inconvenience
+writePost=Hello, this post is part of an automation test, we apologize for the inconvenience

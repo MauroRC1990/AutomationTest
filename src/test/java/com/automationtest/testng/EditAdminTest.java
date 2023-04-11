@@ -59,18 +59,18 @@ public class EditAdminTest {
 		orangeHRMPage.setLicenseExpiryDate();
 		orangeHRMPage.selectNationalityOptions();
 		orangeHRMPage.selectNationalityAmerican();
-		orangeHRMPage.setfirstName(testValuesReader.getValue("adminfirstname"));
-		orangeHRMPage.setMiddleName(testValuesReader.getValue("adminmiddlename"));
-		orangeHRMPage.setlastName(testValuesReader.getValue("adminlastname"));
-		orangeHRMPage.setNickname(testValuesReader.getValue("adminnickname"));
+		orangeHRMPage.setfirstName(testValuesReader.getValue("adminFirstName"));
+		orangeHRMPage.setMiddleName(testValuesReader.getValue("adminMiddleName"));
+		orangeHRMPage.setlastName(testValuesReader.getValue("adminLastName"));
+		orangeHRMPage.setNickname(testValuesReader.getValue("adminNickname"));
 		orangeHRMPage.setDriverLicenseNumber();
 		orangeHRMPage.setSsnNumber();
 		orangeHRMPage.setSinNumber();
 		orangeHRMPage.selectMaritalStatusOptions();
 		orangeHRMPage.selectMaritalStatusMarried();
-		orangeHRMPage.setDateOfBirth(testValuesReader.getValue("admindateofbirth"));
+		orangeHRMPage.setDateOfBirth(testValuesReader.getValue("adminDateOfBirth"));
 		orangeHRMPage.selectMaleGender();
-		orangeHRMPage.setMilitaryService(testValuesReader.getValue("adminmilitaryservice"));
+		orangeHRMPage.setMilitaryService(testValuesReader.getValue("adminMilitaryService"));
 		//orangeHRMPage.setSmokerYes();
 		orangeHRMPage.savePersonalDetails();
 		orangeHRMPage.selectBloodTypeOptions();
@@ -95,6 +95,10 @@ public class EditAdminTest {
 
 	@AfterClass
 	public void afterClass() {
+		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
+		orangeHRMPage.selectUserDropdownOptions();
+		orangeHRMPage.selectLogoutOption();
+		orangeHRMPage.waitForVisibilityOfElement("//div[@class='orangehrm-login-branding']");
 		driver.quit();
 	}
 }

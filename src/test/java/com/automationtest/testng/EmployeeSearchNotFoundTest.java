@@ -55,7 +55,7 @@ public class EmployeeSearchNotFoundTest {
 	public void searchEmployeeNotFound() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.selectPimTab();
-		orangeHRMPage.setEmployeeNameSearch(testValuesReader.getValue("employeenamesearch"));
+		orangeHRMPage.setEmployeeNameSearch(testValuesReader.getValue("employeeNameSearch"));
 		orangeHRMPage.search();
 
 		orangeHRMPage.waitForVisibilityOfElement("//p[text()='No Records Found']");
@@ -76,6 +76,10 @@ public class EmployeeSearchNotFoundTest {
 
 	@AfterClass
 	public void afterClass() {
+		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
+		orangeHRMPage.selectUserDropdownOptions();
+		orangeHRMPage.selectLogoutOption();
+		orangeHRMPage.waitForVisibilityOfElement("//div[@class='orangehrm-login-branding']");
 		driver.quit();
 	}
 }

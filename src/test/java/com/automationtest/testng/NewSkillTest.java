@@ -58,8 +58,8 @@ public class NewSkillTest {
 		orangeHRMPage.selectAdminQualificationsTab();
 		orangeHRMPage.selectSkillsTab();
 		orangeHRMPage.addSkill();
-		orangeHRMPage.setSkillName(testValuesReader.getValue("skillname"));
-		orangeHRMPage.setSkillDescription(testValuesReader.getValue("skilldescription"));
+		orangeHRMPage.setSkillName(testValuesReader.getValue("skillName"));
+		orangeHRMPage.setSkillDescription(testValuesReader.getValue("skillDescription"));
 		orangeHRMPage.save();
 
 		orangeHRMPage.waitForVisibilityOfElement("//h6[text()='Skills']");
@@ -81,6 +81,10 @@ public class NewSkillTest {
 
 	@AfterClass
 	public void afterClass() {
+		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
+		orangeHRMPage.selectUserDropdownOptions();
+		orangeHRMPage.selectLogoutOption();
+		orangeHRMPage.waitForVisibilityOfElement("//div[@class='orangehrm-login-branding']");
 		driver.quit();
 	}
 }

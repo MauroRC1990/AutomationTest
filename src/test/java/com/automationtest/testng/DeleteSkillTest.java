@@ -79,6 +79,10 @@ public class DeleteSkillTest {
 
 	@AfterClass
 	public void afterClass() {
+		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
+		orangeHRMPage.selectUserDropdownOptions();
+		orangeHRMPage.selectLogoutOption();
+		orangeHRMPage.waitForVisibilityOfElement("//div[@class='orangehrm-login-branding']");
 		driver.quit();
 	}
 }

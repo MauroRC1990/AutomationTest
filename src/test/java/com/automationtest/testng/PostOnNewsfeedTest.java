@@ -55,7 +55,7 @@ public class PostOnNewsfeedTest {
 	public void postBuzzNewsfeed() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.selectBuzzTab();
-		orangeHRMPage.writePost(testValuesReader.getValue("writepost"));
+		orangeHRMPage.writePost(testValuesReader.getValue("writePost"));
 		orangeHRMPage.submitPost();
 
 		orangeHRMPage.waitForVisibilityOfElement("//p[text()='Successfully Saved']");
@@ -77,6 +77,10 @@ public class PostOnNewsfeedTest {
 
 	@AfterClass
 	public void afterClass() {
+		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
+		orangeHRMPage.selectUserDropdownOptions();
+		orangeHRMPage.selectLogoutOption();
+		orangeHRMPage.waitForVisibilityOfElement("//div[@class='orangehrm-login-branding']");
 		driver.quit();
 	}
 }

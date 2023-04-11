@@ -51,10 +51,10 @@ public class EditEmployeePersonalDetailsTest {
 
 		orangeHRMPage.selectPimTab();
 		orangeHRMPage.selectAddEmployeeTab();
-		orangeHRMPage.setfirstName(testValuesReader.getValue("employee1firstname"));
-		orangeHRMPage.setMiddleName(testValuesReader.getValue("employee1middlename"));
-		orangeHRMPage.setlastName(testValuesReader.getValue("employee1lastname"));
-		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee1id"));
+		orangeHRMPage.setfirstName(testValuesReader.getValue("employee1FirstName"));
+		orangeHRMPage.setMiddleName(testValuesReader.getValue("employee1MiddleName"));
+		orangeHRMPage.setlastName(testValuesReader.getValue("employee1LastName"));
+		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee1Id"));
 		orangeHRMPage.save();
 
 		orangeHRMPage.waitForPresenceOfElement("//h6[text()='Personal Details']");
@@ -64,15 +64,15 @@ public class EditEmployeePersonalDetailsTest {
 	@Test
 	public void editEmployeePersonalDetails() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
-		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee1id"));
+		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee1Id"));
 		orangeHRMPage.selectNationalityOptions();
 		orangeHRMPage.selectNationalityAmerican();
-		orangeHRMPage.setNickname(testValuesReader.getValue("employee1nickname"));
+		orangeHRMPage.setNickname(testValuesReader.getValue("employee1Nickname"));
 		orangeHRMPage.selectMaritalStatusOptions();
 		orangeHRMPage.selectMaritalStatusSingle();
-		orangeHRMPage.setDateOfBirth(testValuesReader.getValue("employee1dateofbirth"));
+		orangeHRMPage.setDateOfBirth(testValuesReader.getValue("employee1DateOfBirth"));
 		orangeHRMPage.selectMaleGender();
-		orangeHRMPage.setMilitaryService(testValuesReader.getValue("employee1militaryservice"));
+		orangeHRMPage.setMilitaryService(testValuesReader.getValue("employee1MilitaryService"));
 		orangeHRMPage.savePersonalDetails();
 		orangeHRMPage.selectBloodTypeOptions();
 		orangeHRMPage.selectBloodTypeAPositive();
@@ -98,6 +98,10 @@ public class EditEmployeePersonalDetailsTest {
 
 	@AfterClass
 	public void afterClass() {
+		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
+		orangeHRMPage.selectUserDropdownOptions();
+		orangeHRMPage.selectLogoutOption();
+		orangeHRMPage.waitForVisibilityOfElement("//div[@class='orangehrm-login-branding']");
 		driver.quit();
 	}
 }

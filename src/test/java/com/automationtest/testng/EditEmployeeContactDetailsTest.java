@@ -51,24 +51,24 @@ public class EditEmployeeContactDetailsTest {
 
 		orangeHRMPage.selectPimTab();
 		orangeHRMPage.selectAddEmployeeTab();
-		orangeHRMPage.setfirstName(testValuesReader.getValue("employee1firstname"));
-		orangeHRMPage.setMiddleName(testValuesReader.getValue("employee1middlename"));
-		orangeHRMPage.setlastName(testValuesReader.getValue("employee1lastname"));
-		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee1id"));
+		orangeHRMPage.setfirstName(testValuesReader.getValue("employee1FirstName"));
+		orangeHRMPage.setMiddleName(testValuesReader.getValue("employee1MiddleName"));
+		orangeHRMPage.setlastName(testValuesReader.getValue("employee1LastName"));
+		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee1Id"));
 		orangeHRMPage.save();
 
 		orangeHRMPage.waitForPresenceOfElement("//h6[text()='Personal Details']");
 
 		orangeHRMPage.selectPersonalDetailsTab();
-		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee1id"));
+		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee1Id"));
 		orangeHRMPage.selectNationalityOptions();
 		orangeHRMPage.selectNationalityAmerican();
-		orangeHRMPage.setNickname(testValuesReader.getValue("employee1nickname"));
+		orangeHRMPage.setNickname(testValuesReader.getValue("employee1Nickname"));
 		orangeHRMPage.selectMaritalStatusOptions();
 		orangeHRMPage.selectMaritalStatusSingle();
-		orangeHRMPage.setDateOfBirth(testValuesReader.getValue("employee1dateofbirth"));
+		orangeHRMPage.setDateOfBirth(testValuesReader.getValue("employee1DateOfBirth"));
 		orangeHRMPage.selectMaleGender();
-		orangeHRMPage.setMilitaryService(testValuesReader.getValue("employee1militaryservice"));
+		orangeHRMPage.setMilitaryService(testValuesReader.getValue("employee1MilitaryService"));
 		orangeHRMPage.savePersonalDetails();
 		orangeHRMPage.selectBloodTypeOptions();
 		orangeHRMPage.selectBloodTypeAPositive();
@@ -82,9 +82,9 @@ public class EditEmployeeContactDetailsTest {
 		orangeHRMPage.selectContactDetailsTab();
 		orangeHRMPage.selectCountryOptions();
 		orangeHRMPage.selectUnitedStates();
-		orangeHRMPage.setStreet1(testValuesReader.getValue("employeestreet1"));
-		orangeHRMPage.setCity(testValuesReader.getValue("employeecity"));
-		orangeHRMPage.setStateOrProvince(testValuesReader.getValue("employeestateorprovince"));
+		orangeHRMPage.setStreet1(testValuesReader.getValue("employeeStreet1"));
+		orangeHRMPage.setCity(testValuesReader.getValue("employeeCity"));
+		orangeHRMPage.setStateOrProvince(testValuesReader.getValue("employeeStateOrProvince"));
 		orangeHRMPage.save();
 
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
@@ -105,6 +105,10 @@ public class EditEmployeeContactDetailsTest {
 
 	@AfterClass
 	public void afterClass() {
+		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
+		orangeHRMPage.selectUserDropdownOptions();
+		orangeHRMPage.selectLogoutOption();
+		orangeHRMPage.waitForVisibilityOfElement("//div[@class='orangehrm-login-branding']");
 		driver.quit();
 	}
 }
