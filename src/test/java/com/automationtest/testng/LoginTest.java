@@ -4,17 +4,21 @@ import org.testng.annotations.Test;
 
 
 import com.automationtest.pom.OrangeHRMPage;
+import com.automationtest.tools.TestValuesReader;
 
 import org.testng.annotations.BeforeClass;
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.AfterClass;
 import org.testng.Assert;
@@ -23,14 +27,20 @@ public class LoginTest {
 
 	WebDriver driver;
 	Wait<WebDriver> wait;
+	TestValuesReader testValuesReader;
+	
 
 	@BeforeClass
 	public void openBrowser() {
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
-		driver = new ChromeDriver(options);
+		testValuesReader = new TestValuesReader();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.get(testValuesReader.getValue("url"));
+		
+		wait = new FluentWait<WebDriver>(driver)
+				.withTimeout(Duration.ofSeconds(60))
+				.pollingEvery(Duration.ofMillis(1000))
+				.ignoring(NoSuchElementException.class);
 
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.waitForPresenceOfElement("//button[@type='submit']");
@@ -40,17 +50,16 @@ public class LoginTest {
 	@Test
 	public void login() throws InterruptedException {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
-		orangeHRMPage.setUsername("Admin");
-		orangeHRMPage.setPassword("admin123");
+		orangeHRMPage.setUsername(testValuesReader.getValue("user"));
+		orangeHRMPage.setPassword(testValuesReader.getValue("password"));
 		orangeHRMPage.submit();
 
+		orangeHRMPage.waitForVisibilityOfElement("//img[@alt='client brand banner']");
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
-		orangeHRMPage.waitForVisibilityOfAllElements("//div[@class='oxd-pie-chart']");
-		orangeHRMPage.waitForVisibilityOf("//img[@alt='client brand banner']");
 
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\LoginScreenshot.png"));
+			FileUtils.copyFile(file, new File("Test Screenshots\\LoginScreenshot.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

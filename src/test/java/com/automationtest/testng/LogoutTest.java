@@ -9,7 +9,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -17,19 +16,21 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.automationtest.pom.OrangeHRMPage;
+import com.automationtest.tools.TestValuesReader;
 
 public class LogoutTest {
 
 	WebDriver driver;
 	Wait<WebDriver> wait;
+	TestValuesReader testValuesReader;
 
+	
 	@BeforeClass
 	public void openBrowser() {
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
-		driver = new ChromeDriver(options);
+		testValuesReader = new TestValuesReader();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.get(testValuesReader.getValue("url"));
 
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.waitForPresenceOfElement("//button[@type='submit']");
@@ -39,8 +40,8 @@ public class LogoutTest {
 	@Test
 	public void loginAndLogout() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
-		orangeHRMPage.setUsername("Admin");
-		orangeHRMPage.setPassword("admin123");
+		orangeHRMPage.setUsername(testValuesReader.getValue("user"));
+		orangeHRMPage.setPassword(testValuesReader.getValue("password"));
 		orangeHRMPage.submit();
 
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
@@ -53,7 +54,7 @@ public class LogoutTest {
 		
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\LogoutScreenshot.png"));
+			FileUtils.copyFile(file, new File("Test Screenshots\\LogoutScreenshot.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

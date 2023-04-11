@@ -2,14 +2,17 @@ package com.automationtest.testng;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -18,35 +21,40 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.automationtest.pom.OrangeHRMPage;
+import com.automationtest.tools.TestValuesReader;
 
 public class LoginWithTwoBrowsers {
 
 	WebDriver driver;
 	Wait<WebDriver> wait;
+	TestValuesReader testValuesReader;
 
 	@Parameters("Browser")
 
 	@BeforeClass
 	public void openBrowser(String browser) {
-
+		testValuesReader = new TestValuesReader();
 		if(browser.equalsIgnoreCase("Firefox")) {
 
 			driver = new FirefoxDriver();	
 			driver.manage().window().maximize();
-			driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+			driver.get(testValuesReader.getValue("url"));
 
 		}else if (browser.equalsIgnoreCase("Chrome")) { 
 
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--remote-allow-origins=*");
-			driver = new ChromeDriver(options);
+			driver = new ChromeDriver();
 			driver.manage().window().maximize();
-			driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+			driver.get(testValuesReader.getValue("url"));
 
 		} else {
 			throw new IllegalArgumentException("The Browser Type is Undefined");
 		}
-
+		
+		wait = new FluentWait<WebDriver>(driver)
+				.withTimeout(Duration.ofSeconds(60))
+				.pollingEvery(Duration.ofMillis(1000))
+				.ignoring(NoSuchElementException.class);
+		
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.waitForPresenceOfElement("//button[@type='submit']");
 	}
@@ -55,8 +63,8 @@ public class LoginWithTwoBrowsers {
 	@Test
 	public void login() throws InterruptedException {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
-		orangeHRMPage.setUsername("Admin");
-		orangeHRMPage.setPassword("admin123");
+		orangeHRMPage.setUsername(testValuesReader.getValue("user"));
+		orangeHRMPage.setPassword(testValuesReader.getValue("password"));
 		orangeHRMPage.submit();
 
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
@@ -65,7 +73,7 @@ public class LoginWithTwoBrowsers {
 
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\LoginWithBothBrowsersScreenshot.png"));
+			FileUtils.copyFile(file, new File("Test Screenshots\\LoginWithBothBrowsersScreenshot.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

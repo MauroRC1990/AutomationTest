@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-30T19:07:19 ART" name="Default suite" finished-at="2023-03-30T19:07:50 ART" duration-ms="31064">
+  <suite started-at="2023-04-10T23:37:06 ART" name="Default suite" finished-at="2023-04-10T23:37:43 ART" duration-ms="36227">
     <groups>
     </groups>
-    <test started-at="2023-03-30T19:07:19 ART" name="Default test" finished-at="2023-03-30T19:07:50 ART" duration-ms="31064">
+    <test started-at="2023-04-10T23:37:06 ART" name="Default test" finished-at="2023-04-10T23:37:43 ART" duration-ms="36227">
       <class name="com.automationtest.testng.DeleteEmployeeTest">
-        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@74f0ea28]" started-at="2023-03-30T19:07:19 ART" name="login" finished-at="2023-03-30T19:07:41 ART" duration-ms="21783" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@351d00c0]" started-at="2023-04-10T23:37:07 ART" name="login" finished-at="2023-04-10T23:37:33 ART" duration-ms="26435" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="searchNotFound()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@74f0ea28]" started-at="2023-03-30T19:07:41 ART" name="searchNotFound" finished-at="2023-03-30T19:07:50 ART" duration-ms="9041" status="PASS">
+        <test-method signature="deleteEmployee()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@351d00c0]" started-at="2023-04-10T23:37:34 ART" name="deleteEmployee" finished-at="2023-04-10T23:37:43 ART" duration-ms="8713" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchNotFound -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@74f0ea28]" started-at="2023-03-30T19:07:50 ART" name="afterClass" finished-at="2023-03-30T19:07:50 ART" duration-ms="194" status="PASS">
+        </test-method> <!-- deleteEmployee -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@351d00c0]" started-at="2023-04-10T23:37:43 ART" name="afterClass" finished-at="2023-04-10T23:37:43 ART" duration-ms="185" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

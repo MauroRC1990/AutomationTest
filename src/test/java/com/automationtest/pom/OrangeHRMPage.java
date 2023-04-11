@@ -1,17 +1,13 @@
 package com.automationtest.pom;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
 public class OrangeHRMPage {
@@ -378,42 +374,22 @@ public class OrangeHRMPage {
 
 
 	public void waitForVisibilityOfElement(String element) {
-		wait = new FluentWait<WebDriver>(driver)
-				.withTimeout(Duration.ofSeconds(10))
-				.pollingEvery(Duration.ofMillis(500))
-				.ignoring(NoSuchElementException.class);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(element)));
 	}
 
 	public void waitForPresenceOfElement(String element) {
-		wait = new FluentWait<WebDriver>(driver)
-				.withTimeout(Duration.ofSeconds(10))
-				.pollingEvery(Duration.ofMillis(500))
-				.ignoring(NoSuchElementException.class);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(element)));
 	}
 
 	public void waitForInvisibilityOfElement(String element) {
-		wait = new FluentWait<WebDriver>(driver)
-				.withTimeout(Duration.ofSeconds(10))
-				.pollingEvery(Duration.ofMillis(500))
-				.ignoring(NoSuchElementException.class);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(element)));
 	}
 
 	public void waitForVisibilityOfAllElements(String element) {
-		wait = new FluentWait<WebDriver>(driver)
-				.withTimeout(Duration.ofSeconds(10))
-				.pollingEvery(Duration.ofMillis(500))
-				.ignoring(NoSuchElementException.class);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(element)));
 	}
 
 	public void waitForVisibilityOf(String element) {
-		wait = new FluentWait<WebDriver>(driver)
-				.withTimeout(Duration.ofSeconds(10))
-				.pollingEvery(Duration.ofMillis(500))
-				.ignoring(NoSuchElementException.class);
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(element))));
 	}
 	

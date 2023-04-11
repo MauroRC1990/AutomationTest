@@ -2,13 +2,16 @@ package com.automationtest.testng;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -16,36 +19,42 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.automationtest.pom.OrangeHRMPage;
+import com.automationtest.tools.TestValuesReader;
 
 public class EditEmployeeAll2Test {
 
 	WebDriver driver;
 	Wait<WebDriver> wait;
+	TestValuesReader testValuesReader;
 
 
 	@BeforeClass
 	public void loginAndAddEmployee2() {
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
-		driver = new ChromeDriver(options);
+		testValuesReader = new TestValuesReader();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.get(testValuesReader.getValue("url"));
+		
+		wait = new FluentWait<WebDriver>(driver)
+				.withTimeout(Duration.ofSeconds(60))
+				.pollingEvery(Duration.ofMillis(1000))
+				.ignoring(NoSuchElementException.class);
 
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.waitForPresenceOfElement("//button[@type='submit']");
 
-		orangeHRMPage.setUsername("Admin");
-		orangeHRMPage.setPassword("admin123");
+		orangeHRMPage.setUsername(testValuesReader.getValue("user"));
+		orangeHRMPage.setPassword(testValuesReader.getValue("password"));
 		orangeHRMPage.submit();
 
 		orangeHRMPage.waitForPresenceOfElement("//span[@class='oxd-userdropdown-tab']");
 
 		orangeHRMPage.selectPimTab();
 		orangeHRMPage.selectAddEmployeeTab();
-		orangeHRMPage.setfirstName("Jane");
-		orangeHRMPage.setMiddleName("Elizabeth");
-		orangeHRMPage.setlastName("Shepard");
-		orangeHRMPage.setEmployeeId("5922-AC");
+		orangeHRMPage.setfirstName(testValuesReader.getValue("employee2firstname"));
+		orangeHRMPage.setMiddleName(testValuesReader.getValue("employee2middlename"));
+		orangeHRMPage.setlastName(testValuesReader.getValue("employee1lastname"));
+		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee2id"));
 		orangeHRMPage.save();
 
 		orangeHRMPage.waitForPresenceOfElement("//h6[text()='Personal Details']");
@@ -55,15 +64,15 @@ public class EditEmployeeAll2Test {
 	@Test
 	public void editEmployee2() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
-		orangeHRMPage.setEmployeeId("5922-AC");
+		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee2id"));
 		orangeHRMPage.selectNationalityOptions();
 		orangeHRMPage.selectNationalityAmerican();
-		orangeHRMPage.setNickname("Skipper");
+		orangeHRMPage.setNickname(testValuesReader.getValue("employee1nickname"));
 		orangeHRMPage.selectMaritalStatusOptions();
 		orangeHRMPage.selectMaritalStatusSingle();
-		orangeHRMPage.setDateOfBirth("2154-04-11");
+		orangeHRMPage.setDateOfBirth(testValuesReader.getValue("employee1dateofbirth"));
 		orangeHRMPage.selectFemaleGender();
-		orangeHRMPage.setMilitaryService("Commander");
+		orangeHRMPage.setMilitaryService(testValuesReader.getValue("employee1militaryservice"));
 		orangeHRMPage.savePersonalDetails();
 		orangeHRMPage.selectBloodTypeOptions();
 		orangeHRMPage.selectBloodTypeAPositive();
@@ -73,7 +82,7 @@ public class EditEmployeeAll2Test {
 
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\PersonalDetailsScreenshot2.png"));
+			FileUtils.copyFile(file, new File("Test Screenshots\\PersonalDetailsScreenshot2.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -82,16 +91,16 @@ public class EditEmployeeAll2Test {
 		orangeHRMPage.selectContactDetailsTab();
 		orangeHRMPage.selectCountryOptions();
 		orangeHRMPage.selectUnitedStates();
-		orangeHRMPage.setStreet1("Silversun Strip");
-		orangeHRMPage.setCity("Tiberius Towers");
-		orangeHRMPage.setStateOrProvince("Citadel");
+		orangeHRMPage.setStreet1(testValuesReader.getValue("employeestreet1"));
+		orangeHRMPage.setCity(testValuesReader.getValue("employeecity"));
+		orangeHRMPage.setStateOrProvince(testValuesReader.getValue("employeestateorprovince"));
 		orangeHRMPage.save();
 
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 
 		File file1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file1, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\ContactDetailsScreenshot2.png"));
+			FileUtils.copyFile(file1, new File("Test Screenshots\\ContactDetailsScreenshot2.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -99,16 +108,16 @@ public class EditEmployeeAll2Test {
 
 		orangeHRMPage.selectEmergencyContactsTab();
 		orangeHRMPage.addEmergencyContact();
-		orangeHRMPage.setContactName("Jeff Moreau");
-		orangeHRMPage.setRelationship("Pilot");
-		orangeHRMPage.setHomeTelephone("628-2002");
+		orangeHRMPage.setContactName(testValuesReader.getValue("employeeemergencycontactname"));
+		orangeHRMPage.setRelationship(testValuesReader.getValue("employeeemergencycontactrelationship"));
+		orangeHRMPage.setHomeTelephone(testValuesReader.getValue("employeeemergencycontacthometelephone"));
 		orangeHRMPage.save();
 
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 
 		File file2 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file2, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\EmergencyContactsScreenshot2.png"));
+			FileUtils.copyFile(file2, new File("Test Screenshots\\EmergencyContactsScreenshot2.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -118,22 +127,22 @@ public class EditEmployeeAll2Test {
 		orangeHRMPage.addDependent();
 		orangeHRMPage.selectRepationshipOptions();
 		orangeHRMPage.selectChild();
-		orangeHRMPage.setDateOfBirth("2187-11-18");
-		orangeHRMPage.setDependentName("Kaidan");
+		orangeHRMPage.setDateOfBirth(testValuesReader.getValue("employeedependentdateofbirth"));
+		orangeHRMPage.setDependentName(testValuesReader.getValue("employeedependentname"));
 		orangeHRMPage.save();
 
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 		
 		File file3 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file3, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\DependentsScreenshot2.png"));
+			FileUtils.copyFile(file3, new File("Test Screenshots\\DependentsScreenshot2.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		orangeHRMPage.selectJobTab();
-		orangeHRMPage.setJoinedDate("2172-04-11");
+		orangeHRMPage.setJoinedDate(testValuesReader.getValue("employeejobjoineddate"));
 		orangeHRMPage.selectJobTitleOptions();
 		orangeHRMPage.selectSoftwareEngineer();
 		orangeHRMPage.selectJobCategoryOptions();
@@ -148,7 +157,7 @@ public class EditEmployeeAll2Test {
 
 		File file4 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file4, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\JobScreenshot2.png"));
+			FileUtils.copyFile(file4, new File("Test Screenshots\\JobScreenshot2.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -156,24 +165,24 @@ public class EditEmployeeAll2Test {
 		
 		orangeHRMPage.selectQualificationsTab();
 		orangeHRMPage.selectAddWorkExperience();
-		orangeHRMPage.setCompany("Alliance Military");
-		orangeHRMPage.setJobTitle("Commanding Officer");
-		orangeHRMPage.setDateFrom("2172-04-11");
-		orangeHRMPage.setDateTo("2187-04-11");
-		orangeHRMPage.setWorkExperienceComment("Retired from active service with honors");
+		orangeHRMPage.setCompany(testValuesReader.getValue("employeequalificationscompany"));
+		orangeHRMPage.setJobTitle(testValuesReader.getValue("employeequalificationsjobtitle"));
+		orangeHRMPage.setDateFrom(testValuesReader.getValue("employeequalificationsdatefrom"));
+		orangeHRMPage.setDateTo(testValuesReader.getValue("employeequalificationsdateto"));
+		orangeHRMPage.setWorkExperienceComment(testValuesReader.getValue("employeequalificationsworkexperiencecomment"));
 		orangeHRMPage.save();
 		orangeHRMPage.selectAddSkills();
 		orangeHRMPage.selectSkillOptions();
 		orangeHRMPage.selectN7Option();
-		orangeHRMPage.setYearsOfExperience("6");
-		orangeHRMPage.setSkillComment("One of 300 out of 750 to graduate");
+		orangeHRMPage.setYearsOfExperience(testValuesReader.getValue("employeequalificationsyearsofexperience"));
+		orangeHRMPage.setSkillComment(testValuesReader.getValue("employeequalificationsskillcomments"));
 		orangeHRMPage.selectSaveSkill();
 
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
 
 		File file5 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file5, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\QualificationsScreenshot2.png"));
+			FileUtils.copyFile(file5, new File("Test Screenshots\\QualificationsScreenshot2.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

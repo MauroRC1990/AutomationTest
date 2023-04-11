@@ -5,8 +5,8 @@
     <classes>
       <class name="com.automationtest.testng.DeleteEmployeeTest">
         <methods>
-          <include name="searchNotFound"/>
           <include name="afterClass"/>
+          <include name="deleteEmployee"/>
           <include name="login"/>
         </methods>
       </class> <!-- com.automationtest.testng.DeleteEmployeeTest -->

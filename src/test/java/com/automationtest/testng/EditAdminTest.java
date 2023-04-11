@@ -2,13 +2,16 @@ package com.automationtest.testng;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -16,26 +19,32 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.automationtest.pom.OrangeHRMPage;
+import com.automationtest.tools.TestValuesReader;
 
 public class EditAdminTest {
 
 	WebDriver driver;
 	Wait<WebDriver> wait;
+	TestValuesReader testValuesReader;
 
 
 	@BeforeClass
 	public void login() {
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
-		driver = new ChromeDriver(options);
+		testValuesReader = new TestValuesReader();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.get(testValuesReader.getValue("url"));
+		
+		wait = new FluentWait<WebDriver>(driver)
+				.withTimeout(Duration.ofSeconds(60))
+				.pollingEvery(Duration.ofMillis(1000))
+				.ignoring(NoSuchElementException.class);
 
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.waitForPresenceOfElement("//button[@type='submit']");
 
-		orangeHRMPage.setUsername("Admin");
-		orangeHRMPage.setPassword("admin123");
+		orangeHRMPage.setUsername(testValuesReader.getValue("user"));
+		orangeHRMPage.setPassword(testValuesReader.getValue("password"));
 		orangeHRMPage.submit();
 
 		orangeHRMPage.waitForPresenceOfElement("//span[@class='oxd-userdropdown-tab']");
@@ -50,18 +59,18 @@ public class EditAdminTest {
 		orangeHRMPage.setLicenseExpiryDate();
 		orangeHRMPage.selectNationalityOptions();
 		orangeHRMPage.selectNationalityAmerican();
-		orangeHRMPage.setfirstName("Paul");
-		orangeHRMPage.setMiddleName("");
-		orangeHRMPage.setlastName("Collings");
-		orangeHRMPage.setNickname("");
+		orangeHRMPage.setfirstName(testValuesReader.getValue("adminfirstname"));
+		orangeHRMPage.setMiddleName(testValuesReader.getValue("adminmiddlename"));
+		orangeHRMPage.setlastName(testValuesReader.getValue("adminlastname"));
+		orangeHRMPage.setNickname(testValuesReader.getValue("adminnickname"));
 		orangeHRMPage.setDriverLicenseNumber();
 		orangeHRMPage.setSsnNumber();
 		orangeHRMPage.setSinNumber();
 		orangeHRMPage.selectMaritalStatusOptions();
 		orangeHRMPage.selectMaritalStatusMarried();
-		orangeHRMPage.setDateOfBirth("1975-10-15");
+		orangeHRMPage.setDateOfBirth(testValuesReader.getValue("admindateofbirth"));
 		orangeHRMPage.selectMaleGender();
-		orangeHRMPage.setMilitaryService("");
+		orangeHRMPage.setMilitaryService(testValuesReader.getValue("adminmilitaryservice"));
 		//orangeHRMPage.setSmokerYes();
 		orangeHRMPage.savePersonalDetails();
 		orangeHRMPage.selectBloodTypeOptions();
@@ -72,7 +81,7 @@ public class EditAdminTest {
 
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file, new File("C:\\Users\\Solidus\\Documents\\Mis trabajos\\Trabajo QA\\Test Screenshots\\AdminEditingScreenshot.png"));
+			FileUtils.copyFile(file, new File("Test Screenshots\\AdminEditingScreenshot.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
