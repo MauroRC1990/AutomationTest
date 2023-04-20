@@ -4,7 +4,7 @@ Series of tests simulating a user selecting various options on the website.
 
 ## Description
 
-The project consists of 10-20 cases which represent user interactions with the website. Souch interactions include:
+The project consists of 10-20 cases executed with Testng, which represent user interactions with the website. Souch interactions include:
 
 * Logging in
 * Logging out
