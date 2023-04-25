@@ -6,17 +6,23 @@ Series of tests simulating a user selecting various options on the website.
 
 The project consists of 10-20 cases executed with TestNG, which represent user interactions with the website. Souch interactions include:
 
-* Logging in
+* Logging in (with one and two browsers in parallel)
 * Logging out
 * Adding an employee
 * Removing an employee
 * Editing an employee's information
     * Personal Details
     * Contact Details
+    * Dependents
     * Emergency Contacts
     * Job
     * Qualifications
 * Adding custom options to forms
+* Adding skills
+* Adding termination reasons
+* Post in newsfeed
+* Remove the post from newsfeed
+* Search for an employee and not found
 
 ## Getting Started
 
