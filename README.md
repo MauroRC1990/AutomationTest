@@ -34,3 +34,9 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * Selenium libraries
 * Testng
 * Eclipse IDE
+
+### Executing a login with two browsers in parallel
+
+* Run cmd
+* Go to project folder
+* Type "mvn test -Dsurefire.suiteXmlFiles=testng.xml"
