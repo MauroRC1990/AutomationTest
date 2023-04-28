@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-28T16:09:45 ART" name="Two Browser Login Suite" finished-at="2023-04-28T16:10:37 ART" duration-ms="52171">
+  <suite started-at="2023-04-28T16:44:18 ART" name="Two Browser Login Suite" finished-at="2023-04-28T16:44:58 ART" duration-ms="39580">
     <groups>
     </groups>
-    <test started-at="2023-04-28T16:09:45 ART" name="ChromeTest" finished-at="2023-04-28T16:10:27 ART" duration-ms="42496">
+    <test started-at="2023-04-28T16:44:18 ART" name="ChromeTest" finished-at="2023-04-28T16:44:57 ART" duration-ms="39040">
       <class name="com.automationtest.testng.LoginWithTwoBrowsers">
-        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@209da20d]" started-at="2023-04-28T16:09:45 ART" name="openBrowser" finished-at="2023-04-28T16:10:19 ART" duration-ms="34001" status="PASS">
+        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@209da20d]" started-at="2023-04-28T16:44:18 ART" name="openBrowser" finished-at="2023-04-28T16:44:49 ART" duration-ms="30919" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,19 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="login()[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@209da20d]" started-at="2023-04-28T16:10:19 ART" name="login" finished-at="2023-04-28T16:10:25 ART" duration-ms="6001" status="PASS">
+        <test-method signature="login()[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@209da20d]" started-at="2023-04-28T16:44:49 ART" name="login" finished-at="2023-04-28T16:44:55 ART" duration-ms="5536" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@209da20d]" started-at="2023-04-28T16:10:25 ART" name="afterTest" finished-at="2023-04-28T16:10:27 ART" duration-ms="2322" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@209da20d]" started-at="2023-04-28T16:44:55 ART" name="afterTest" finished-at="2023-04-28T16:44:57 ART" duration-ms="2549" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- com.automationtest.testng.LoginWithTwoBrowsers -->
     </test> <!-- ChromeTest -->
-    <test started-at="2023-04-28T16:09:45 ART" name="FirefoxTest" finished-at="2023-04-28T16:10:37 ART" duration-ms="52171">
+    <test started-at="2023-04-28T16:44:18 ART" name="FirefoxTest" finished-at="2023-04-28T16:44:58 ART" duration-ms="39580">
       <class name="com.automationtest.testng.LoginWithTwoBrowsers">
-        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@bd4dc25]" started-at="2023-04-28T16:09:45 ART" name="openBrowser" finished-at="2023-04-28T16:10:28 ART" duration-ms="43488" status="PASS">
+        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@bd4dc25]" started-at="2023-04-28T16:44:18 ART" name="openBrowser" finished-at="2023-04-28T16:44:47 ART" duration-ms="28592" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,11 +41,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="login()[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@bd4dc25]" started-at="2023-04-28T16:10:28 ART" name="login" finished-at="2023-04-28T16:10:33 ART" duration-ms="4527" status="PASS">
+        <test-method signature="login()[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@bd4dc25]" started-at="2023-04-28T16:44:47 ART" name="login" finished-at="2023-04-28T16:44:51 ART" duration-ms="4676" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@bd4dc25]" started-at="2023-04-28T16:10:33 ART" name="afterTest" finished-at="2023-04-28T16:10:37 ART" duration-ms="4126" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@bd4dc25]" started-at="2023-04-28T16:44:51 ART" name="afterTest" finished-at="2023-04-28T16:44:58 ART" duration-ms="6251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
