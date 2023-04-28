@@ -15,8 +15,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -31,7 +31,7 @@ public class LoginWithTwoBrowsers {
 
 	@Parameters("Browser")
 
-	@BeforeClass
+	@BeforeTest
 	public void openBrowser(String browser) {
 		testValuesReader = new TestValuesReader();
 		if(browser.equalsIgnoreCase("Firefox")) {
@@ -85,8 +85,8 @@ public class LoginWithTwoBrowsers {
 	}
 
 
-	@AfterClass
-	public void afterClass() {
+	@AfterTest
+	public void afterTest() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.selectUserDropdownOptions();
 		orangeHRMPage.selectLogoutOption();
