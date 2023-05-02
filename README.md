@@ -30,7 +30,7 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 
 * Windows 10
 * Maven latest version
-* Java 8 or newest
+* Java 11 or newest
 * Selenium libraries
 * Testng
 * Eclipse IDE
