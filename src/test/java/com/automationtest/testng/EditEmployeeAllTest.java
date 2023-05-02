@@ -64,7 +64,6 @@ public class EditEmployeeAllTest {
 	@Test
 	public void editEmployee() {
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
-		orangeHRMPage.setEmployeeId(testValuesReader.getValue("employee1Id"));
 		orangeHRMPage.selectNationalityOptions();
 		orangeHRMPage.selectNationalityAmerican();
 		orangeHRMPage.setNickname(testValuesReader.getValue("employee1Nickname"));
