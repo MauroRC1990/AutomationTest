@@ -35,10 +35,19 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * Testng
 * Eclipse IDE
 
-### Executing a login with two browsers in parallel
+### Executing a login case with two browsers in parallel
 
 * Run cmd
 * Go to project folder
 * Type "mvn test -Dsurefire.suiteXmlFiles=testng.xml"
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
+
+### Executing a new custom field, termination reason, skill, employee and newsfeed post case
+
+* Run cmd
+* Go to project folder
+* Type "mvn test -Dsurefire.suiteXmlFiles=testng2.xml"
+* A screenshot of the result is stored in "Test Screenshots" folder
+* A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
+

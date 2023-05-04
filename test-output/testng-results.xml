@@ -1,55 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-02T19:18:24 ART" name="Two Browser Login Suite" finished-at="2023-05-02T19:19:04 ART" duration-ms="40447">
+  <suite started-at="2023-05-04T16:18:51 ART" name="Login, delete custom field, termination reason, employee, newsfeed post and logout" finished-at="2023-05-04T16:22:34 ART" duration-ms="223052">
     <groups>
     </groups>
-    <test started-at="2023-05-02T19:18:24 ART" name="FirefoxTest" finished-at="2023-05-02T19:18:59 ART" duration-ms="35349">
-      <class name="com.automationtest.testng.LoginWithTwoBrowsers">
-        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@1bd4fdd]" started-at="2023-05-02T19:18:24 ART" name="openBrowser" finished-at="2023-05-02T19:18:50 ART" duration-ms="26255" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Firefox]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2023-05-04T16:18:51 ART" name="Login" finished-at="2023-05-04T16:19:21 ART" duration-ms="29241">
+      <class name="com.automationtest.testng.LoginTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.automationtest.testng.LoginTest@67c27493]" started-at="2023-05-04T16:18:51 ART" name="openBrowser" finished-at="2023-05-04T16:19:12 ART" duration-ms="20703" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="login()[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@1bd4fdd]" started-at="2023-05-02T19:18:50 ART" name="login" finished-at="2023-05-02T19:18:55 ART" duration-ms="4666" status="PASS">
+        <test-method signature="login()[pri:0, instance:com.automationtest.testng.LoginTest@67c27493]" started-at="2023-05-04T16:19:12 ART" name="login" finished-at="2023-05-04T16:19:18 ART" duration-ms="6149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@1bd4fdd]" started-at="2023-05-02T19:18:55 ART" name="afterTest" finished-at="2023-05-02T19:18:59 ART" duration-ms="4384" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.LoginTest@67c27493]" started-at="2023-05-04T16:19:18 ART" name="afterClass" finished-at="2023-05-04T16:19:21 ART" duration-ms="2338" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.automationtest.testng.LoginWithTwoBrowsers -->
-    </test> <!-- FirefoxTest -->
-    <test started-at="2023-05-02T19:18:24 ART" name="ChromeTest" finished-at="2023-05-02T19:19:04 ART" duration-ms="40447">
-      <class name="com.automationtest.testng.LoginWithTwoBrowsers">
-        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@74235045]" started-at="2023-05-02T19:18:24 ART" name="openBrowser" finished-at="2023-05-02T19:18:54 ART" duration-ms="30859" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.automationtest.testng.LoginTest -->
+    </test> <!-- Login -->
+    <test started-at="2023-05-04T16:19:21 ART" name="Delete Employee" finished-at="2023-05-04T16:19:53 ART" duration-ms="32891">
+      <class name="com.automationtest.testng.DeleteEmployeeTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@78691363]" started-at="2023-05-04T16:19:21 ART" name="login" finished-at="2023-05-04T16:19:42 ART" duration-ms="21224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="deleteEmployee()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@78691363]" started-at="2023-05-04T16:19:42 ART" name="deleteEmployee" finished-at="2023-05-04T16:19:51 ART" duration-ms="9439" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteEmployee -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteEmployeeTest@78691363]" started-at="2023-05-04T16:19:51 ART" name="afterClass" finished-at="2023-05-04T16:19:53 ART" duration-ms="2225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.automationtest.testng.DeleteEmployeeTest -->
+    </test> <!-- Delete Employee -->
+    <test started-at="2023-05-04T16:19:53 ART" name="Delete Termination Reason" finished-at="2023-05-04T16:20:29 ART" duration-ms="35880">
+      <class name="com.automationtest.testng.DeleteTerminationReasonTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteTerminationReasonTest@5fe94a96]" started-at="2023-05-04T16:19:53 ART" name="login" finished-at="2023-05-04T16:20:14 ART" duration-ms="20966" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="deleteTerminationReason()[pri:0, instance:com.automationtest.testng.DeleteTerminationReasonTest@5fe94a96]" started-at="2023-05-04T16:20:14 ART" name="deleteTerminationReason" finished-at="2023-05-04T16:20:27 ART" duration-ms="12697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteTerminationReason -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteTerminationReasonTest@5fe94a96]" started-at="2023-05-04T16:20:27 ART" name="afterClass" finished-at="2023-05-04T16:20:29 ART" duration-ms="2214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.automationtest.testng.DeleteTerminationReasonTest -->
+    </test> <!-- Delete Termination Reason -->
+    <test started-at="2023-05-04T16:20:29 ART" name="Delete Custom Field" finished-at="2023-05-04T16:21:02 ART" duration-ms="32591">
+      <class name="com.automationtest.testng.DeleteCustomFieldTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteCustomFieldTest@5e0e82ae]" started-at="2023-05-04T16:20:29 ART" name="login" finished-at="2023-05-04T16:20:51 ART" duration-ms="21781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="deleteCustomField()[pri:0, instance:com.automationtest.testng.DeleteCustomFieldTest@5e0e82ae]" started-at="2023-05-04T16:20:51 ART" name="deleteCustomField" finished-at="2023-05-04T16:21:00 ART" duration-ms="8612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCustomField -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteCustomFieldTest@5e0e82ae]" started-at="2023-05-04T16:21:00 ART" name="afterClass" finished-at="2023-05-04T16:21:02 ART" duration-ms="2194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.automationtest.testng.DeleteCustomFieldTest -->
+    </test> <!-- Delete Custom Field -->
+    <test started-at="2023-05-04T16:21:02 ART" name="Delete Skill" finished-at="2023-05-04T16:21:38 ART" duration-ms="36390">
+      <class name="com.automationtest.testng.DeleteSkillTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteSkillTest@28701274]" started-at="2023-05-04T16:21:02 ART" name="login" finished-at="2023-05-04T16:21:24 ART" duration-ms="21925" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="deleteSkill()[pri:0, instance:com.automationtest.testng.DeleteSkillTest@28701274]" started-at="2023-05-04T16:21:24 ART" name="deleteSkill" finished-at="2023-05-04T16:21:36 ART" duration-ms="12180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSkill -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteSkillTest@28701274]" started-at="2023-05-04T16:21:36 ART" name="afterClass" finished-at="2023-05-04T16:21:38 ART" duration-ms="2283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.automationtest.testng.DeleteSkillTest -->
+    </test> <!-- Delete Skill -->
+    <test started-at="2023-05-04T16:21:38 ART" name="Delete Newsfeed Post" finished-at="2023-05-04T16:22:09 ART" duration-ms="31017">
+      <class name="com.automationtest.testng.DeleteNewsfeedPostTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.automationtest.testng.DeleteNewsfeedPostTest@5b7a5baa]" started-at="2023-05-04T16:21:38 ART" name="login" finished-at="2023-05-04T16:21:59 ART" duration-ms="20921" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="deleteBuzzNewsfeedPost()[pri:0, instance:com.automationtest.testng.DeleteNewsfeedPostTest@5b7a5baa]" started-at="2023-05-04T16:21:59 ART" name="deleteBuzzNewsfeedPost" finished-at="2023-05-04T16:22:07 ART" duration-ms="7887" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBuzzNewsfeedPost -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.DeleteNewsfeedPostTest@5b7a5baa]" started-at="2023-05-04T16:22:07 ART" name="afterClass" finished-at="2023-05-04T16:22:09 ART" duration-ms="2206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.automationtest.testng.DeleteNewsfeedPostTest -->
+    </test> <!-- Delete Newsfeed Post -->
+    <test started-at="2023-05-04T16:22:09 ART" name="Logout" finished-at="2023-05-04T16:22:34 ART" duration-ms="24952">
+      <class name="com.automationtest.testng.LogoutTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.automationtest.testng.LogoutTest@6c6cb480]" started-at="2023-05-04T16:22:09 ART" name="openBrowser" finished-at="2023-05-04T16:22:27 ART" duration-ms="17280" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="login()[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@74235045]" started-at="2023-05-02T19:18:54 ART" name="login" finished-at="2023-05-02T19:18:59 ART" duration-ms="4503" status="PASS">
+        <test-method signature="loginAndLogout()[pri:0, instance:com.automationtest.testng.LogoutTest@6c6cb480]" started-at="2023-05-04T16:22:27 ART" name="loginAndLogout" finished-at="2023-05-04T16:22:34 ART" duration-ms="7173" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.automationtest.testng.LoginWithTwoBrowsers@74235045]" started-at="2023-05-02T19:18:59 ART" name="afterTest" finished-at="2023-05-02T19:19:04 ART" duration-ms="5070" status="PASS">
+        </test-method> <!-- loginAndLogout -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.LogoutTest@6c6cb480]" started-at="2023-05-04T16:22:34 ART" name="afterClass" finished-at="2023-05-04T16:22:34 ART" duration-ms="497" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.automationtest.testng.LoginWithTwoBrowsers -->
-    </test> <!-- ChromeTest -->
-  </suite> <!-- Two Browser Login Suite -->
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.automationtest.testng.LogoutTest -->
+    </test> <!-- Logout -->
+  </suite> <!-- Login, delete custom field, termination reason, employee, newsfeed post and logout -->
 </testng-results>
