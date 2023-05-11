@@ -28,12 +28,12 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 
 ### Dependencies
 
-* Windows 10
 * Maven latest version
 * Java 11 or newest
 * Selenium libraries
 * Testng
 * Eclipse IDE
+* Commons-io
 
 ### Executing a login case with two browsers in parallel
 
