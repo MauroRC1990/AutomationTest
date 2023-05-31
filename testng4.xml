@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Two Browser Login Suite">
+	
+  <test name="FirefoxOrChromeTest">
+	  <parameter name="Browser" value="Firefox, Chrome" />
+      <classes>
+      <class name="com.automationtest.testng.LoginWithTwoBrowsers"/>
+      </classes>
+  </test> <!-- Test --> 
+</suite> <!-- Suite -->
