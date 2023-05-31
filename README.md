@@ -43,6 +43,15 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
+### Executing a login case choosing which browser to use
+
+* Run cmd
+* Go to project folder
+* Type "mvn test -DBrowser=Firefox -Dsurefire.suiteXmlFiles=testng4.xml"
+* Type in "-DBrowser=" which browser you want to run the test with, Firefox or Chrome respectively
+* A screenshot of the result is stored in "Test Screenshots" folder
+* A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
+
 ### Executing a new custom field, termination reason, skill, employee and newsfeed post case
 
 * Run cmd
