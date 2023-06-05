@@ -20,6 +20,12 @@
     		<artifactId>commons-io</artifactId>
     		<version>2.11.0</version>
 		</dependency>
+		<dependency>
+		    <groupId>io.rest-assured</groupId>
+		    <artifactId>rest-assured</artifactId>
+		    <version>5.3.0</version>
+		    <scope>test</scope>
+		</dependency>
 		</dependencies>
 		<build>
     <pluginManagement>
@@ -36,7 +42,7 @@
 			</plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19.1</version>
+                <version>3.1.0</version>
                 <configuration>
           			<systemProperties>
 						  <property>
@@ -45,7 +51,11 @@
             				</property>
           					</systemProperties>		
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng4.xml</suiteXmlFile>                       
+                        <suiteXmlFile>testng4.xml</suiteXmlFile> 
+                        <suiteXmlFile>testng2.xml</suiteXmlFile>   
+                        <suiteXmlFile>testng3.xml</suiteXmlFile>   
+                        <suiteXmlFile>testng5.xml</suiteXmlFile> 
+                        <suiteXmlFile>testng6.xml</suiteXmlFile>                                                                                                                                                         
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
