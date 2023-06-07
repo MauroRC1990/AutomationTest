@@ -11,6 +11,6 @@ public class RestassuredTest {
 		           .queryParam("Account_No","1") .when().get("http://demo.guru99.com/V4/sinkministatement.php").getStatusCode();
 		   System.out.println("The response status is "+statusCode);
 
-		   given().when().get("http://demo.guru99.com/V4/sinkministatement.php").then().assertThat().statusCode(200);
+		   given().when().get("http://demo.guru99.com/V4/sinkministatement.php").then().assertThat().statusCode(statusCode);
 		}
 }

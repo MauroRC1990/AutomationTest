@@ -36,28 +36,35 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * Commons-io
 * Io.rest-assured
 
-### Executing a login case with two browsers in parallel
+### Executing a login test case with two browsers in parallel
 
 * Run cmd
 * Go to project folder
-* Type "mvn test -Dsurefire.suiteXmlFiles=testng6.xml"
+* Type "mvn test -Dsurefire.suiteXmlFiles=TwoBrowserLoginSuite.xml"
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
-### Executing a login case choosing which browser to use
+### Executing a login test case choosing which browser to use
 
 * Run cmd
 * Go to project folder
-* Type "mvn test -DBrowser=Firefox -Dsurefire.suiteXmlFiles=testng4.xml"
+* Type "mvn test -DBrowser=Firefox -Dsurefire.suiteXmlFiles=ChooseBrowserLoginSuite.xml"
     * Indicate in "-DBrowser=" which browser you want to run the test with, Firefox or Chrome respectively
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
-### Executing a new custom field, termination reason, skill, employee and newsfeed post case
+### Executing a new custom field, termination reason, skill, employee and newsfeed post test case
 
 * Run cmd
 * Go to project folder
-* Type "mvn test -Dsurefire.suiteXmlFiles=testng2.xml"
+* Type "mvn test -Dsurefire.suiteXmlFiles=NewEmployeeAndFields.xml"
+* A screenshot of the result is stored in "Test Screenshots" folder
+* A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
+
+### Executing a deletion of custom field, termination reason, skill, employee and newsfeed post test case
+
+* Run cmd
+* Type "mvn test -Dsurefire.suiteXmlFiles=DeleteEmployeeAndFields.xml"
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
@@ -72,4 +79,4 @@ Send a request to a demo website and return an OK response
 
 * Run cmd
 * Go to project folder
-* Type "mvn test -Dsurefire.suiteXmlFiles=testng5.xml"
+* Type "mvn test -Dsurefire.suiteXmlFiles=RestAssured.xml"
