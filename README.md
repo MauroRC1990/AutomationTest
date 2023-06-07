@@ -34,6 +34,7 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * Testng
 * Eclipse IDE
 * Commons-io
+* Io.rest-assured
 
 ### Executing a login case with two browsers in parallel
 
@@ -60,3 +61,15 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
+
+# REST Assured Test
+
+## Description
+
+Send a request to a demo website and return an OK response
+
+## Steps
+
+* Run cmd
+* Go to project folder
+* Type "mvn test -Dsurefire.suiteXmlFiles=testng5.xml"
