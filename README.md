@@ -69,9 +69,9 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
 
-# REST Assured Test
+# REST Assured Tests
 
-## Description
+## Test 1
 
 Send a request to a demo website and return an OK response
 
@@ -80,3 +80,11 @@ Send a request to a demo website and return an OK response
 * Run cmd
 * Go to project folder
 * Type "mvn test -Dsurefire.suiteXmlFiles=RestAssured.xml"
+
+## Test 2
+
+Send a request to a demo website and return a list of values
+
+* Run cmd
+* Go to project folder
+* Type "mvn test -Dsurefire.suiteXmlFiles=RestAssured2.xml"
