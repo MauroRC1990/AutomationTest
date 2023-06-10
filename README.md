@@ -75,7 +75,7 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 
 Send a request to a demo website and return an OK response
 
-## Steps
+### Steps
 
 * Run cmd
 * Go to project folder
@@ -84,6 +84,8 @@ Send a request to a demo website and return an OK response
 ## Test 2
 
 Send a request to a demo website and return a list of values
+
+### Steps
 
 * Run cmd
 * Go to project folder
