@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Choose Browser Login Suite">
 	
-  <test name="FirefoxOrChromeTest">
+  <test name="Firefox or Chrome Test">
 	  <parameter name="Browser" value="Firefox, Chrome" />
       <classes>
       <class name="com.automationtest.testng.LoginWithTwoBrowsers"/>

@@ -6,7 +6,7 @@ Series of tests simulating a user selecting various options on the website.
 
 The project consists of 10-20 cases executed with TestNG, which represent user interactions with the website. Souch interactions include:
 
-* Logging in (with one and two browsers in parallel)
+* Logging in (with one and two browsers in parallel and choosing a browser)
 * Logging out
 * Adding an employee
 * Removing an employee
@@ -64,7 +64,16 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 ### Executing a deletion of custom field, termination reason, skill, employee and newsfeed post test case
 
 * Run cmd
+* Go to project folder
 * Type "mvn test -Dsurefire.suiteXmlFiles=DeleteEmployeeAndFields.xml"
+* A screenshot of the result is stored in "Test Screenshots" folder
+* A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
+
+### Search for an employee and not finding it
+
+* Run cmd
+* Go to project folder
+* Type "mvn test -Dsurefire.suiteXmlFiles=EmployeeSearchNotFound.xml
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
@@ -80,6 +89,7 @@ Send a request to a demo website and return an OK response
 * Run cmd
 * Go to project folder
 * Type "mvn test -Dsurefire.suiteXmlFiles=RestAssured.xml"
+* A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
 ## Test 2
 
@@ -90,3 +100,5 @@ Send a request to a demo website and return a list of values
 * Run cmd
 * Go to project folder
 * Type "mvn test -Dsurefire.suiteXmlFiles=RestAssured2.xml"
+* A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
+

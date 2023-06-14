@@ -57,6 +57,7 @@
                         <suiteXmlFile>RestAssured.xml</suiteXmlFile> 
                         <suiteXmlFile>RestAssured2.xml</suiteXmlFile> 
                         <suiteXmlFile>TwoBrowserLoginSuite.xml</suiteXmlFile>                                                                                                                                                         
+                        <suiteXmlFile>EmployeeSearchNotFound.xml</suiteXmlFile>                                                                                                                                                         
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
