@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
 
-public class RestassuredTest {
+public class RestassuredReturnOkTest {
 	@Test
 	public static void getResponseStatus(){
 		   int statusCode= given().queryParam("CUSTOMER_ID","68195")

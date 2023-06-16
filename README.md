@@ -88,7 +88,7 @@ Send a request to a demo website and return an OK response
 
 * Run cmd
 * Go to project folder
-* Type "mvn test -Dsurefire.suiteXmlFiles=RestAssured.xml"
+* Type "mvn test -Dsurefire.suiteXmlFiles=RestAssuredReturnOk.xml"
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
 ## Test 2
@@ -99,6 +99,6 @@ Send a request to a demo website and return a list of values
 
 * Run cmd
 * Go to project folder
-* Type "mvn test -Dsurefire.suiteXmlFiles=RestAssured2.xml"
+* Type "mvn test -Dsurefire.suiteXmlFiles=RestAssuredReturnList.xml"
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
