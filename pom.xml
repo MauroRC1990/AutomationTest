@@ -51,13 +51,13 @@
             				</property>
           					</systemProperties>		
                     <suiteXmlFiles>
-                        <suiteXmlFile>ChooseBrowserLoginSuite.xml</suiteXmlFile> 
+                        <suiteXmlFile>ChooseBrowserLogin.xml</suiteXmlFile> 
                         <suiteXmlFile>LoginAndLogout.xml</suiteXmlFile> 
                         <suiteXmlFile>NewEmployeeAndFields.xml</suiteXmlFile>   
                         <suiteXmlFile>DeleteEmployeeAndFields.xml</suiteXmlFile>   
                         <suiteXmlFile>RestAssured.xml</suiteXmlFile> 
                         <suiteXmlFile>RestAssured2.xml</suiteXmlFile> 
-                        <suiteXmlFile>TwoBrowserLoginSuite.xml</suiteXmlFile>                                                                                                                                                         
+                        <suiteXmlFile>TwoBrowserLogin.xml</suiteXmlFile>                                                                                                                                                         
                         <suiteXmlFile>EmployeeSearchNotFound.xml</suiteXmlFile>                                                                                                                                                         
                     </suiteXmlFiles>
                 </configuration>
