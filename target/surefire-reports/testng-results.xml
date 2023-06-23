@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-23T19:34:25 ART" name="Logout" finished-at="2023-06-23T19:35:14 ART" duration-ms="48597">
+  <suite started-at="2023-06-23T19:54:40 ART" name="Two Browser Login Suite" finished-at="2023-06-23T19:55:51 ART" duration-ms="71251">
     <groups>
     </groups>
-    <test started-at="2023-06-23T19:34:25 ART" name="Login and logout" finished-at="2023-06-23T19:35:14 ART" duration-ms="48597">
-      <class name="com.automationtest.testng.LogoutTest">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.automationtest.testng.LogoutTest@7d0b7e3c]" started-at="2023-06-23T19:34:25 ART" name="openBrowser" finished-at="2023-06-23T19:35:00 ART" duration-ms="34203" status="PASS">
+    <test started-at="2023-06-23T19:54:40 ART" name="ChromeTest" finished-at="2023-06-23T19:55:14 ART" duration-ms="33779">
+      <class name="com.automationtest.testng.LoginChromeTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.automationtest.testng.LoginChromeTest@4a83a74a]" started-at="2023-06-23T19:54:40 ART" name="openBrowser" finished-at="2023-06-23T19:55:09 ART" duration-ms="28771" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="loginAndLogout()[pri:0, instance:com.automationtest.testng.LogoutTest@7d0b7e3c]" started-at="2023-06-23T19:35:00 ART" name="loginAndLogout" finished-at="2023-06-23T19:35:13 ART" duration-ms="13221" status="PASS">
+        <test-method signature="login()[pri:0, instance:com.automationtest.testng.LoginChromeTest@4a83a74a]" started-at="2023-06-23T19:55:09 ART" name="login" finished-at="2023-06-23T19:55:13 ART" duration-ms="4317" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginAndLogout -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.LogoutTest@7d0b7e3c]" started-at="2023-06-23T19:35:13 ART" name="afterClass" finished-at="2023-06-23T19:35:14 ART" duration-ms="1087" status="PASS">
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.LoginChromeTest@4a83a74a]" started-at="2023-06-23T19:55:13 ART" name="afterClass" finished-at="2023-06-23T19:55:14 ART" duration-ms="621" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.automationtest.testng.LogoutTest -->
-    </test> <!-- Login and logout -->
-  </suite> <!-- Logout -->
+      </class> <!-- com.automationtest.testng.LoginChromeTest -->
+    </test> <!-- ChromeTest -->
+    <test started-at="2023-06-23T19:54:40 ART" name="FirefoxTest" finished-at="2023-06-23T19:55:51 ART" duration-ms="71251">
+      <class name="com.automationtest.testng.LoginFirefoxTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.automationtest.testng.LoginFirefoxTest@7d0b7e3c]" started-at="2023-06-23T19:54:40 ART" name="openBrowser" finished-at="2023-06-23T19:55:34 ART" duration-ms="53430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="login()[pri:0, instance:com.automationtest.testng.LoginFirefoxTest@7d0b7e3c]" started-at="2023-06-23T19:55:34 ART" name="login" finished-at="2023-06-23T19:55:39 ART" duration-ms="5482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.LoginFirefoxTest@7d0b7e3c]" started-at="2023-06-23T19:55:39 ART" name="afterClass" finished-at="2023-06-23T19:55:51 ART" duration-ms="12289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.automationtest.testng.LoginFirefoxTest -->
+    </test> <!-- FirefoxTest -->
+  </suite> <!-- Two Browser Login Suite -->
 </testng-results>

@@ -4,13 +4,13 @@
 	
   <test name="FirefoxTest">
       <classes>
-      <class name="com.automationtest.testng.LoginTestFirefox"/>
+      <class name="com.automationtest.testng.LoginFirefoxTest"/>
       </classes>
   </test> <!-- Test --> 
    
   <test name="ChromeTest">    
     <classes>
-       <class name="com.automationtest.testng.LoginTestChrome"/>
+       <class name="com.automationtest.testng.LoginChromeTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

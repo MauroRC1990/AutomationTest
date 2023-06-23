@@ -5,7 +5,7 @@
   <test name="Firefox or Chrome Test">
 	  <parameter name="Browser" value="Firefox, Chrome" />
       <classes>
-      <class name="com.automationtest.testng.LoginWithTwoBrowsers"/>
+      <class name="com.automationtest.testng.LoginWithTwoBrowsersTest"/>
       </classes>
   </test> <!-- Test --> 
 </suite> <!-- Suite -->

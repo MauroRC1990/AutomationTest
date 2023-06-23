@@ -1,4 +1,3 @@
-C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\LoginWithTwoBrowsers.java
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\EditEmployeePersonalDetailsTest.java
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\NewTerminationReasonTest.java
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\restassured\RestassuredReturnOkTest.java
@@ -9,7 +8,6 @@ C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\test
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\EditEmployeeEmergencyContactsTest.java
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\LogoutTest.java
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\EditEmployeeAllTest.java
-C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\LoginTestChrome.java
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\DeleteNewsfeedPostTest.java
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\EmployeeSearchNotFoundTest.java
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\DeleteTerminationReasonTest.java
@@ -22,8 +20,10 @@ C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\test
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\pom\OrangeHRMPage.java
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\restassured\RestassuredReturnListTest.java
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\EditEmployeeAll2Test.java
+C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\LoginChromeTest.java
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\NewCustomFieldDropDownTest.java
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\NewEmployee2Test.java
-C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\LoginTestFirefox.java
+C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\LoginFirefoxTest.java
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\EditAdminTest.java
 C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\NewEmployeeTest.java
+C:\Users\Solidus\eclipse-workspace\Testing\src\test\java\com\automationtest\testng\LoginWithTwoBrowsersTest.java

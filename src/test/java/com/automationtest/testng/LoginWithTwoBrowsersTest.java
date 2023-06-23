@@ -1,12 +1,5 @@
 package com.automationtest.testng;
 
-import org.testng.annotations.Test;
-
-
-import com.automationtest.pom.OrangeHRMPage;
-import com.automationtest.tools.TestValuesReader;
-
-import org.testng.annotations.BeforeClass;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -18,30 +11,50 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-import org.testng.annotations.AfterClass;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
-public class LoginTestChrome {
+import com.automationtest.pom.OrangeHRMPage;
+import com.automationtest.tools.TestValuesReader;
+
+public class LoginWithTwoBrowsersTest {
 
 	WebDriver driver;
 	Wait<WebDriver> wait;
 	TestValuesReader testValuesReader;
-	
 
-	@BeforeClass
-	public void openBrowser() {
+	@Parameters("Browser")
+
+	@BeforeTest
+	public void openBrowser(String browser) {
 		testValuesReader = new TestValuesReader();
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get(testValuesReader.getValue("url"));
+		if(browser.equalsIgnoreCase("Firefox")) {
+
+			driver = new FirefoxDriver();	
+			driver.manage().window().maximize();
+			driver.get(testValuesReader.getValue("url"));
+
+		}else if (browser.equalsIgnoreCase("Chrome")) { 
+
+			driver = new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.get(testValuesReader.getValue("url"));
+
+		} else {
+			throw new IllegalArgumentException("The Browser Type is Undefined");
+		}
 		
 		wait = new FluentWait<WebDriver>(driver)
 				.withTimeout(Duration.ofSeconds(60))
 				.pollingEvery(Duration.ofMillis(1000))
 				.ignoring(NoSuchElementException.class);
-
+		
 		OrangeHRMPage orangeHRMPage = new OrangeHRMPage(driver, wait);
 		orangeHRMPage.waitForPresenceOfElement("//button[@type='submit']");
 	}
@@ -54,12 +67,13 @@ public class LoginTestChrome {
 		orangeHRMPage.setPassword(testValuesReader.getValue("password"));
 		orangeHRMPage.submit();
 
-		orangeHRMPage.waitForVisibilityOfElement("//img[@alt='client brand banner']");
 		orangeHRMPage.waitForInvisibilityOfElement("//div[@class='oxd-loading-spinner']");
+		orangeHRMPage.waitForVisibilityOfAllElements("//div[@class='oxd-pie-chart']");
+		orangeHRMPage.waitForVisibilityOf("//img[@alt='client brand banner']");
 
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file, new File("Test Screenshots\\LoginScreenshot.png"));
+			FileUtils.copyFile(file, new File("Test Screenshots\\LoginWithBothBrowsersScreenshot.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -71,8 +85,8 @@ public class LoginTestChrome {
 	}
 
 
-	@AfterClass
-	public void afterClass() {
+	@AfterTest
+	public void afterTest() {
 		driver.quit();
 	}
 }

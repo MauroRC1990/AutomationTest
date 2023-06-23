@@ -23,7 +23,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.AfterClass;
 import org.testng.Assert;
 
-public class LoginTestFirefox {
+public class LoginFirefoxTest {
 
 	WebDriver driver;
 	Wait<WebDriver> wait;
