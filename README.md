@@ -40,7 +40,7 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 
 * Run cmd
 * Go to project folder
-* Type "mvn test -Dsurefire.suiteXmlFiles=TwoBrowserLoginSuite.xml"
+* Type "mvn test -Dsurefire.suiteXmlFiles=TwoBrowserLogin.xml"
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
@@ -50,6 +50,14 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * Go to project folder
 * Type "mvn test -DBrowser=Firefox -Dsurefire.suiteXmlFiles=ChooseBrowserLoginSuite.xml"
     * Indicate in "-DBrowser=" which browser you want to run the test with, Firefox or Chrome respectively
+* A screenshot of the result is stored in "Test Screenshots" folder
+* A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
+
+### Executing a login and logout test case
+
+* Run cmd
+* Go to project folder
+* Type "mvn test -Dsurefire.suiteXmlFiles=LoginAndLogout.xml"
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
@@ -73,7 +81,7 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 
 * Run cmd
 * Go to project folder
-* Type "mvn test -Dsurefire.suiteXmlFiles=EmployeeSearchNotFound.xml
+* Type "mvn test -Dsurefire.suiteXmlFiles=EmployeeSearchNotFound.xml"
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 

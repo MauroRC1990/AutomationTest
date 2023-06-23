@@ -52,6 +52,7 @@
           					</systemProperties>		
                     <suiteXmlFiles>
                         <suiteXmlFile>ChooseBrowserLoginSuite.xml</suiteXmlFile> 
+                        <suiteXmlFile>LoginAndLogout.xml</suiteXmlFile> 
                         <suiteXmlFile>NewEmployeeAndFields.xml</suiteXmlFile>   
                         <suiteXmlFile>DeleteEmployeeAndFields.xml</suiteXmlFile>   
                         <suiteXmlFile>RestAssured.xml</suiteXmlFile> 
