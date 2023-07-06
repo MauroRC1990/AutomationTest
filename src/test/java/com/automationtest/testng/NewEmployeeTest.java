@@ -26,7 +26,6 @@ public class NewEmployeeTest {
 	WebDriver driver;
 	Wait<WebDriver> wait;
 	TestValuesReader testValuesReader;
-
 	
 	@BeforeClass
 	public void login() {

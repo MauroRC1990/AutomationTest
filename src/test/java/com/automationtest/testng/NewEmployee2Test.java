@@ -10,7 +10,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
@@ -30,7 +30,7 @@ public class NewEmployee2Test {
 	@BeforeClass
 	public void login() {
 		testValuesReader = new TestValuesReader();
-		driver = new ChromeDriver();
+		driver = new FirefoxDriver();	
 		driver.manage().window().maximize();
 		driver.get(testValuesReader.getValue("url"));
 		

@@ -77,6 +77,14 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
+### Executing two new employees in different browsers in parallel
+
+* Run cmd
+* Go to project folder
+* Type "mvn test -Dsurefire.suiteXmlFiles=TwoNewEmployeesCreation.xml"
+* A screenshot of the result is stored in "Test Screenshots" folder
+* A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
+
 ### Search for an employee and not finding it
 
 * Run cmd

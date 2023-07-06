@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Two New Employee Creation Suite" parallel="tests">
+	
+  <test name="Employee1">
+      <classes>
+      <class name="com.automationtest.testng.NewEmployeeTest"/>
+      </classes>
+  </test> <!-- Test --> 
+   
+  <test name="Employee2">    
+    <classes>
+       <class name="com.automationtest.testng.NewEmployee2Test"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
