@@ -61,19 +61,19 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
-### Executing a new custom field, termination reason, skill, employee and newsfeed post test case
+### Executing a new custom field, termination reason, skill, two employees and newsfeed post test case
 
 * Run cmd
 * Go to project folder
-* Type "mvn test -Dsurefire.suiteXmlFiles=NewEmployeeAndFields.xml"
+* Type "mvn test -Dsurefire.suiteXmlFiles=NewEmployeesAndFields.xml"
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
-### Executing a deletion of custom field, termination reason, skill, employee and newsfeed post test case
+### Executing a deletion of custom field, termination reason, skill, employees and newsfeed post test case
 
 * Run cmd
 * Go to project folder
-* Type "mvn test -Dsurefire.suiteXmlFiles=DeleteEmployeeAndFields.xml"
+* Type "mvn test -Dsurefire.suiteXmlFiles=DeleteEmployeesAndFields.xml"
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 

@@ -26,6 +26,12 @@
       </classes>
   </test>
   
+  <test name="New Employee 2">    
+      <classes>
+      <class name="com.automationtest.testng.EditEmployeeAll2Test"/>
+      </classes>
+  </test>
+  
   <test name="New Newsfeed Post">    
       <classes>
       <class name="com.automationtest.testng.PostOnNewsfeedTest"/>

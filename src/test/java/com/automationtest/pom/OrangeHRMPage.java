@@ -316,6 +316,9 @@ public class OrangeHRMPage {
 
 	@FindBy(xpath="//div[text()='5923-AC']//ancestor::div[@class='oxd-table-row oxd-table-row--with-border oxd-table-row--clickable']//child::i[@class='oxd-icon bi-trash']")
 	WebElement deleteBtn;
+	
+	@FindBy(xpath="//div[text()='5922-AC']//ancestor::div[@class='oxd-table-row oxd-table-row--with-border oxd-table-row--clickable']//child::i[@class='oxd-icon bi-trash']")
+	WebElement delete2Btn;
 
 	@FindBy(xpath="//button[@class='oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin']")
 	WebElement confirmDeleteBtn;
@@ -930,6 +933,11 @@ public class OrangeHRMPage {
 	public void delete() {
 		waitForVisibilityOfElement("//div[text()='5923-AC']//ancestor::div[@class='oxd-table-row oxd-table-row--with-border oxd-table-row--clickable']//child::i[@class='oxd-icon bi-trash']");
 		deleteBtn.click();
+	}
+	
+	public void delete2() {
+		waitForVisibilityOfElement("//div[text()='5922-AC']//ancestor::div[@class='oxd-table-row oxd-table-row--with-border oxd-table-row--clickable']//child::i[@class='oxd-icon bi-trash']");
+		delete2Btn.click();
 	}
 
 	public void confirmDelete() {

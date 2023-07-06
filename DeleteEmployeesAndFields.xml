@@ -2,11 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Delete custom field, termination reason, employee and newsfeed post" parallel="false">	
   
-  <test name="Delete Employee">
+  <test name="Delete Employee 1">
       <classes>
       <class name="com.automationtest.testng.DeleteEmployeeTest"/>
       </classes>
-  </test>  
+  </test>
+  
+  <test name="Delete Employee 2">
+      <classes>
+      <class name="com.automationtest.testng.DeleteEmployee2Test"/>
+      </classes>
+  </test>    
    
   <test name="Delete Termination Reason">    
       <classes>
