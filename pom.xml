@@ -60,6 +60,7 @@
                         <suiteXmlFile>TwoBrowserLogin.xml</suiteXmlFile>                                                                                                                                                         
                         <suiteXmlFile>EmployeeSearchNotFound.xml</suiteXmlFile>                                                                                                                                                         
                         <suiteXmlFile>TwoNewEmployeesCreation.xml</suiteXmlFile>                                                                                                                                                         
+                        <suiteXmlFile>EditAdmin.xml</suiteXmlFile>                                                                                                                                                         
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

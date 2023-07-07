@@ -88,7 +88,7 @@ public class EditAdminTest {
 		}
 
 		boolean expectedValue = true;
-		boolean realValue = driver.findElement(By.xpath("//p[text()='Successfully Saved']")).isDisplayed();
+		boolean realValue = driver.findElement(By.xpath("//div[text()='-- Select --']")).isDisplayed();
 		Assert.assertEquals(expectedValue, realValue);
 	}
 

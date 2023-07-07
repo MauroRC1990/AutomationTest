@@ -77,7 +77,7 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
-### Executing two new employees in different browsers in parallel
+### Executing two new employees in different browsers in parallel test case
 
 * Run cmd
 * Go to project folder
@@ -85,7 +85,7 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
-### Search for an employee and not finding it
+### Executing search for an employee and not finding it test case
 
 * Run cmd
 * Go to project folder
@@ -93,6 +93,13 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
+### Executing edit admin values test case
+
+* Run cmd
+* Go to project folder
+* Type "mvn test -Dsurefire.suiteXmlFiles=EditAdmin.xml"
+* A screenshot of the result is stored in "Test Screenshots" folder
+* A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
 # REST Assured Tests
 
