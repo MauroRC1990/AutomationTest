@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Two Browser Login Suite" parallel="tests">
-	
-  <test name="FirefoxTest">
-      <classes>
-      <class name="com.automationtest.testng.LoginFirefoxTest"/>
-      </classes>
-  </test> <!-- Test --> 
-   
-  <test name="ChromeTest">    
-    <classes>
-       <class name="com.automationtest.testng.LoginChromeTest"/>
-    </classes>
-  </test> <!-- Test -->
+	<test name="FirefoxTest">
+		<classes>
+			<class name="com.automationtest.testng.LoginFirefoxTest" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="ChromeTest">
+		<classes>
+			<class name="com.automationtest.testng.LoginChromeTest" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

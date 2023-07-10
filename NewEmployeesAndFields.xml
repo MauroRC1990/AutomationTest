@@ -1,41 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="New custom field, termination reason, skill, employee and newsfeed post" parallel="false">	
-  
-  <test name="New Custom Field">
-      <classes>
-      <class name="com.automationtest.testng.NewCustomFieldDropDownTest"/>
-      </classes>
-  </test>  
-   
-  <test name="New Termination Reason">    
-      <classes>
-      <class name="com.automationtest.testng.NewTerminationReasonTest"/>
-      </classes>
-  </test> 
-  
-    <test name="New Skill">    
-      <classes>
-      <class name="com.automationtest.testng.NewSkillTest"/>
-      </classes>
-  </test>
-  
-  <test name="New Employee">    
-      <classes>
-      <class name="com.automationtest.testng.EditEmployeeAllTest"/>
-      </classes>
-  </test>
-  
-  <test name="New Employee 2">    
-      <classes>
-      <class name="com.automationtest.testng.EditEmployeeAll2Test"/>
-      </classes>
-  </test>
-  
-  <test name="New Newsfeed Post">    
-      <classes>
-      <class name="com.automationtest.testng.PostOnNewsfeedTest"/>
-      </classes>
-  </test>
-
-</suite> 
+<suite name="New custom field, termination reason, skill, employee and newsfeed post" parallel="false">
+	<test name="New Custom Field">
+		<classes>
+			<class name="com.automationtest.testng.NewCustomFieldDropDownTest" />
+		</classes>
+	</test>
+	<test name="New Termination Reason">
+		<classes>
+			<class name="com.automationtest.testng.NewTerminationReasonTest" />
+		</classes>
+	</test>
+	<test name="New Skill">
+		<classes>
+			<class name="com.automationtest.testng.NewSkillTest" />
+		</classes>
+	</test>
+	<test name="New Employee">
+		<classes>
+			<class name="com.automationtest.testng.EditEmployeeAllTest" />
+		</classes>
+	</test>
+	<test name="New Employee 2">
+		<classes>
+			<class name="com.automationtest.testng.EditEmployeeAll2Test" />
+		</classes>
+	</test>
+	<test name="New Newsfeed Post">
+		<classes>
+			<class name="com.automationtest.testng.PostOnNewsfeedTest" />
+		</classes>
+	</test>
+</suite>

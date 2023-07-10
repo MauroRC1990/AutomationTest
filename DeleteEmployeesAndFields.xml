@@ -1,41 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Delete custom field, termination reason, employee and newsfeed post" parallel="false">	
-  
-  <test name="Delete Employee 1">
-      <classes>
-      <class name="com.automationtest.testng.DeleteEmployeeTest"/>
-      </classes>
-  </test>
-  
-  <test name="Delete Employee 2">
-      <classes>
-      <class name="com.automationtest.testng.DeleteEmployee2Test"/>
-      </classes>
-  </test>    
-   
-  <test name="Delete Termination Reason">    
-      <classes>
-      <class name="com.automationtest.testng.DeleteTerminationReasonTest"/>
-      </classes>
-  </test> 
-  
-  <test name="Delete Custom Field">    
-      <classes>
-      <class name="com.automationtest.testng.DeleteCustomFieldTest"/>
-      </classes>
-  </test>
-  
-  <test name="Delete Skill">    
-      <classes>
-      <class name="com.automationtest.testng.DeleteSkillTest"/>
-      </classes>
-  </test>
-  
-  <test name="Delete Newsfeed Post">    
-      <classes>
-      <class name="com.automationtest.testng.DeleteNewsfeedPostTest"/>
-      </classes>
-  </test>
-
-</suite> 
+<suite name="Delete custom field, termination reason, employee and newsfeed post" parallel="false">
+	<test name="Delete Employee 1">
+		<classes>
+			<class name="com.automationtest.testng.DeleteEmployeeTest" />
+		</classes>
+	</test>
+	<test name="Delete Employee 2">
+		<classes>
+			<class name="com.automationtest.testng.DeleteEmployee2Test" />
+		</classes>
+	</test>
+	<test name="Delete Termination Reason">
+		<classes>
+			<class name="com.automationtest.testng.DeleteTerminationReasonTest" />
+		</classes>
+	</test>
+	<test name="Delete Custom Field">
+		<classes>
+			<class name="com.automationtest.testng.DeleteCustomFieldTest" />
+		</classes>
+	</test>
+	<test name="Delete Skill">
+		<classes>
+			<class name="com.automationtest.testng.DeleteSkillTest" />
+		</classes>
+	</test>
+	<test name="Delete Newsfeed Post">
+		<classes>
+			<class name="com.automationtest.testng.DeleteNewsfeedPostTest" />
+		</classes>
+	</test>
+</suite>
