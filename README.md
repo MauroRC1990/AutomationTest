@@ -23,6 +23,8 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * Post in newsfeed
 * Remove the post from newsfeed
 * Search for an employee and not found
+* RestAssured test for an Ok return value
+* RestAssured test for a list of values return
 
 ## Getting Started
 
@@ -31,7 +33,7 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * Maven latest version
 * Java 11 or newest
 * Selenium libraries
-* Testng
+* TestNG
 * Eclipse IDE
 * Commons-io
 * Io.rest-assured
@@ -98,6 +100,14 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * Run cmd
 * Go to project folder
 * Type "mvn test -Dsurefire.suiteXmlFiles=TwoNewEmployeesCreation.xml"
+* A screenshot of the result is stored in "Test Screenshots" folder
+* A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
+
+### Executing deleting two employees in different browsers in parallel test case
+
+* Run cmd
+* Go to project folder
+* Type "mvn test -Dsurefire.suiteXmlFiles=DeleteTwoEmployees.xml"
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Delete Two Employees Suite" parallel="tests">
+	<test name="Delete Employee 1">
+		<classes>
+			<class name="com.automationtest.testng.DeleteEmployeeTest" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Delete Employee 2">
+		<classes>
+			<class name="com.automationtest.testng.DeleteEmployee2FirefoxTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
