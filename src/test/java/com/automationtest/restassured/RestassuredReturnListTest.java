@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.*;
 
 public class RestassuredReturnListTest {
 	@Test
-	public void test1() {
+	public void getList() {
 
 		given().get("https://reqres.in/api/users?page=2").then().
 		statusCode(200).
