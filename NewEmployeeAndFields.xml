@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="New custom field, termination reason, skill, employees and newsfeed post" parallel="false">
+<suite name="New custom field, termination reason, skill, employee and newsfeed post" parallel="false">
 	<test name="New Custom Field">
 		<classes>
 			<class name="com.automationtest.testng.NewCustomFieldDropDownTest" />
@@ -19,11 +19,6 @@
 	<test name="New Employee">
 		<classes>
 			<class name="com.automationtest.testng.EditEmployeeAllTest" />
-		</classes>
-	</test>
-	<test name="New Employee 2">
-		<classes>
-			<class name="com.automationtest.testng.EditEmployeeAll2Test" />
 		</classes>
 	</test>
 	<test name="New Newsfeed Post">

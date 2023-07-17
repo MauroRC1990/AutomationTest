@@ -53,7 +53,9 @@
 						<suiteXmlFiles>
 							<suiteXmlFile>ChooseBrowserLogin.xml</suiteXmlFile>
 							<suiteXmlFile>LoginAndLogout.xml</suiteXmlFile>
+							<suiteXmlFile>NewEmployeeAndFields.xml</suiteXmlFile>
 							<suiteXmlFile>NewEmployeesAndFields.xml</suiteXmlFile>
+							<suiteXmlFile>DeleteEmployeeAndFields.xml</suiteXmlFile>
 							<suiteXmlFile>DeleteEmployeesAndFields.xml</suiteXmlFile>
 							<suiteXmlFile>RestAssured.xml</suiteXmlFile>
 							<suiteXmlFile>RestAssured2.xml</suiteXmlFile>
