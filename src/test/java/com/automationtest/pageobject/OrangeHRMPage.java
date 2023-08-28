@@ -1,4 +1,4 @@
-package com.automationtest.pom;
+package com.automationtest.pageobject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

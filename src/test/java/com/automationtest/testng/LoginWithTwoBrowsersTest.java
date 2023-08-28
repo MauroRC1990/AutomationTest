@@ -20,7 +20,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.automationtest.pom.OrangeHRMPage;
+import com.automationtest.pageobject.OrangeHRMPage;
 import com.automationtest.tools.TestValuesReader;
 
 public class LoginWithTwoBrowsersTest {

@@ -119,7 +119,7 @@ The project consists of 10-20 cases executed with TestNG, which represent user i
 * A screenshot of the result is stored in "Test Screenshots" folder
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
-### Executing two test cases of edit admin in parallel
+### Executing four test cases of edit admin in two browsers in parallel
 
 * Run cmd
 * Go to project folder

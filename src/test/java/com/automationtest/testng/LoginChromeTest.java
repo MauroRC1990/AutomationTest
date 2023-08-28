@@ -2,8 +2,7 @@ package com.automationtest.testng;
 
 import org.testng.annotations.Test;
 
-
-import com.automationtest.pom.OrangeHRMPage;
+import com.automationtest.pageobject.OrangeHRMPage;
 import com.automationtest.tools.TestValuesReader;
 
 import org.testng.annotations.BeforeClass;
