@@ -74,6 +74,7 @@
 							<suiteXmlFile>TwoNewEmployeesCreation.xml</suiteXmlFile>
 							<suiteXmlFile>DeleteTwoEmployees.xml</suiteXmlFile>
 							<suiteXmlFile>EditAdmin.xml</suiteXmlFile>
+							<suiteXmlFile>CelCalculator.xml</suiteXmlFile>							
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>

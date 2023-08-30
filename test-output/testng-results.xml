@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-29T20:21:27 ART" name="Default suite" finished-at="2023-08-29T20:22:11 ART" duration-ms="44720">
+  <suite started-at="2023-08-30T15:07:50 ART" name="Default suite" finished-at="2023-08-30T15:08:38 ART" duration-ms="48120">
     <groups>
     </groups>
-    <test started-at="2023-08-29T20:21:27 ART" name="Default test" finished-at="2023-08-29T20:22:11 ART" duration-ms="44720">
+    <test started-at="2023-08-30T15:07:50 ART" name="Default test" finished-at="2023-08-30T15:08:38 ART" duration-ms="48120">
       <class name="com.automationtest.appium.CalculatorTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automationtest.appium.CalculatorTest@3754a4bf]" started-at="2023-08-29T20:21:27 ART" name="setUp" finished-at="2023-08-29T20:22:05 ART" duration-ms="37984" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automationtest.appium.CalculatorTest@4afcd809]" started-at="2023-08-30T15:07:50 ART" name="setUp" finished-at="2023-08-30T15:08:29 ART" duration-ms="38817" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testexample()[pri:0, instance:com.automationtest.appium.CalculatorTest@3754a4bf]" started-at="2023-08-29T20:22:05 ART" name="testexample" finished-at="2023-08-29T20:22:11 ART" duration-ms="6341" status="PASS">
+        <test-method signature="testexample()[pri:0, instance:com.automationtest.appium.CalculatorTest@4afcd809]" started-at="2023-08-30T15:08:29 ART" name="testexample" finished-at="2023-08-30T15:08:37 ART" duration-ms="8911" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testexample -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automationtest.appium.CalculatorTest@3754a4bf]" started-at="2023-08-29T20:22:11 ART" name="tearDown" finished-at="2023-08-29T20:22:11 ART" duration-ms="327" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automationtest.appium.CalculatorTest@4afcd809]" started-at="2023-08-30T15:08:37 ART" name="tearDown" finished-at="2023-08-30T15:08:38 ART" duration-ms="322" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

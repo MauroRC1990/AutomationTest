@@ -151,3 +151,17 @@ Send a request to a demo website and return a list of values
 * Type "mvn test -Dsurefire.suiteXmlFiles=RestAssuredReturnList.xml"
 * A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
 
+# Appium Tests
+
+## Calculator multiplication and division
+
+Multiply 2 by 2 then divide it by 2
+
+### Steps
+
+* Run cmd
+* Go to project folder
+* Type "mvn test -Dsurefire.suiteXmlFiles=CelCalculator.xml"
+* A screenshot of the result is stored in "Test Screenshots" folder
+* A report is created in "Testing\target\surfire-reports" named "emailable-report.html"
+

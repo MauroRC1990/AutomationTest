@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-16T09:57:32 ART" name="Logout" finished-at="2023-08-16T09:58:12 ART" duration-ms="39978">
+  <suite started-at="2023-08-30T15:23:31 ART" name="Calculator multiplication and division" finished-at="2023-08-30T15:24:17 ART" duration-ms="45708">
     <groups>
     </groups>
-    <test started-at="2023-08-16T09:57:32 ART" name="Login and logout" finished-at="2023-08-16T09:58:12 ART" duration-ms="39978">
-      <class name="com.automationtest.testng.LogoutTest">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.automationtest.testng.LogoutTest@7d0b7e3c]" started-at="2023-08-16T09:57:32 ART" name="openBrowser" finished-at="2023-08-16T09:58:02 ART" duration-ms="29728" status="PASS">
+    <test started-at="2023-08-30T15:23:31 ART" name="CalculatorTest" finished-at="2023-08-30T15:24:17 ART" duration-ms="45708">
+      <class name="com.automationtest.appium.CalculatorTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automationtest.appium.CalculatorTest@54c5a2ff]" started-at="2023-08-30T15:23:31 ART" name="setUp" finished-at="2023-08-30T15:24:07 ART" duration-ms="35969" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method signature="loginAndLogout()[pri:0, instance:com.automationtest.testng.LogoutTest@7d0b7e3c]" started-at="2023-08-16T09:58:02 ART" name="loginAndLogout" finished-at="2023-08-16T09:58:12 ART" duration-ms="9739" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="testexample()[pri:0, instance:com.automationtest.appium.CalculatorTest@54c5a2ff]" started-at="2023-08-30T15:24:07 ART" name="testexample" finished-at="2023-08-30T15:24:16 ART" duration-ms="9303" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginAndLogout -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationtest.testng.LogoutTest@7d0b7e3c]" started-at="2023-08-16T09:58:12 ART" name="afterClass" finished-at="2023-08-16T09:58:12 ART" duration-ms="351" status="PASS">
+        </test-method> <!-- testexample -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automationtest.appium.CalculatorTest@54c5a2ff]" started-at="2023-08-30T15:24:16 ART" name="tearDown" finished-at="2023-08-30T15:24:17 ART" duration-ms="379" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.automationtest.testng.LogoutTest -->
-    </test> <!-- Login and logout -->
-  </suite> <!-- Logout -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automationtest.appium.CalculatorTest -->
+    </test> <!-- CalculatorTest -->
+  </suite> <!-- Calculator multiplication and division -->
 </testng-results>

@@ -4,6 +4,9 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 
@@ -11,6 +14,8 @@ import com.automationtest.pageobject.MobileLocators;
 import com.automationtest.util.AppiumHandler;
 
 import java.net.URL;
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.logging.Level;
 
@@ -42,9 +47,19 @@ public class CalculatorTest {
 		MobileLocators.setNumber2();
 		MobileLocators.setMultiply();
 		MobileLocators.setNumber2();
+		MobileLocators.setDivision();
+		MobileLocators.setNumber2();		
 		MobileLocators.getResult();
 		MobileLocators.getCalcText();
 
+		
+		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(file, new File("Test Screenshots\\CelCalculator.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@AfterMethod

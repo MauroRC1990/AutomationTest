@@ -21,6 +21,9 @@ public class MobileLocators {
 	@FindBy(xpath="//android.widget.EditText[@resource-id='com.sec.android.app.popupcalculator:id/txtCalc']")
 	WebElement calcText;
 	
+	@FindBy(xpath="//android.widget.Button[@resource-id='com.sec.android.app.popupcalculator:id/bt_div']")
+	WebElement division;
+	
 	
 	
 	
@@ -48,6 +51,10 @@ public class MobileLocators {
 	
 	public void setMultiply() {
 		multiply.click();
+	}
+	
+	public void setDivision() {
+		division.click();
 	}
 	
 	public void getResult() {
